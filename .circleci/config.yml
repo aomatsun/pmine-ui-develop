@@ -1,0 +1,234 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2.1
+
+defaults: &defaults
+  working_directory: ~/repo
+  docker:
+    - image: cimg/node:14.14
+
+set_env: &set_env
+  name: Setup Environment Variables
+  command: |
+    if [[ $CIRCLE_PULL_REQUEST ]]
+    then
+      echo 'Fetching Base Commit from GitHub'
+      echo 'export CIRCLE_PR_NUMBER="${CIRCLE_PR_NUMBER:-${CIRCLE_PULL_REQUEST##*/}}"' >> $BASH_ENV
+      source $BASH_ENV
+      echo "export CIRCLE_PR_BASE_SHA=`curl -s https://api.github.com/repos/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}/pulls/${CIRCLE_PR_NUMBER} | jq -r '.base.sha'`" >> $BASH_ENV
+      echo 'export AFFECTED_ARGS="--base ${CIRCLE_PR_BASE_SHA}"' >> $BASH_ENV
+    else
+      echo 'Fetching Base Commit from Deploy Cache'
+      if [[ ! -f dist/last-deploy.txt ]]
+      then
+        mkdir dist && git rev-parse HEAD~1 > dist/last-deploy.txt
+      fi
+      echo 'export AFFECTED_ARGS="--base $(cat dist/last-deploy.txt)"' >> $BASH_ENV
+    fi
+    source $BASH_ENV
+npm_cache: &npm_cache
+  keys:
+    - node-deps-node14-{{ checksum "package-lock.json" }}
+    # fallback to using the latest cache if no exact match is found
+    - node-deps-node14-
+
+deploy_cache: &deploy_cache
+  key: last-deploy-sha
+
+npm_install: &npm_install
+  name: Install Dependencies
+  command: npx ci
+
+docker_build_and_tag: &docker_build_and_tag
+  name: Docker Build Groot UI
+  command: |
+    DATE_SHA=$(date +"%Y-%m-%d-")$(git rev-parse --short HEAD);
+    mkdir docker-build
+    docker build -f ./apps/groot-ui/Dockerfile . -t groot-ui:${DATE_SHA};
+    docker save --output ./docker-build/groot-ui-${DATE_SHA}.tar groot-ui:${DATE_SHA};
+
+jobs:
+  install:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          <<: *npm_cache
+      - run:
+          <<: *npm_install
+      - save_cache:
+          key: node-deps-node14-{{ checksum "package-lock.json" }}
+          paths:
+            - ~/.cache
+            - node_modules
+  check-formatting:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          <<: *deploy_cache
+      - run:
+          <<: *set_env
+      - restore_cache:
+          <<: *npm_cache
+      - run: npm run format:check ${AFFECTED_ARGS}
+  lint:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          <<: *deploy_cache
+      - run:
+          <<: *set_env
+      - restore_cache:
+          <<: *npm_cache
+#      - run: ./node_modules/.bin/nx workspace-lint
+      #- run: npm run affected:lint ${AFFECTED_ARGS} --parallel
+      - run: npm run lint
+  build:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          <<: *deploy_cache
+      - run:
+          <<: *set_env
+      - restore_cache:
+          <<: *npm_cache
+      #- run: npm run affected:build -- ${AFFECTED_ARGS} --parallel --configuration production
+      - run: npm run build:prod
+      - save_cache:
+          key: build-{{ .Environment.CIRCLE_WORKFLOW_ID }}
+          paths:
+            - dist
+      - store_artifacts:
+          path: dist
+  test:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          <<: *deploy_cache
+      - run:
+          <<: *set_env
+      - restore_cache:
+          <<: *npm_cache
+      #- run: npm run affected:test -- ${AFFECTED_ARGS} --parallel -- --ci --code-coverage
+      - run: npm run test --parallel --ci
+  e2e:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          <<: *deploy_cache
+      - run:
+          <<: *set_env
+      - restore_cache:
+          <<: *npm_cache
+      - run: npm run affected:e2e -- ${AFFECTED_ARGS} --configuration production -- --headless
+      - store_artifacts:
+          path: dist/cypress
+
+  dockerize:
+    <<: *defaults
+    steps:
+      - setup_remote_docker:
+          version: 20.10.2
+          docker_layer_caching: true
+      - checkout
+      - restore_cache:
+          <<: *deploy_cache
+      - run:
+          <<: *set_env
+      - restore_cache:
+          <<: *npm_cache
+      - restore_cache:
+          key: build-{{ .Environment.CIRCLE_WORKFLOW_ID }}
+      - run:
+          <<: *docker_build_and_tag
+      - save_cache:
+          key: dockerize-{{ .Environment.CIRCLE_WORKFLOW_ID }}
+          paths:
+            - docker-build
+      - store_artifacts:
+          path: docker-build
+
+#  deploy:
+#    <<: *defaults
+#    steps:
+#      - checkout
+#      - restore_cache:
+#          <<: *deploy_cache
+#      - run:
+#          <<: *set_env
+#      - restore_cache:
+#          <<: *npm_cache
+#      - restore_cache:
+#          key: build-{{ .Environment.CIRCLE_WORKFLOW_ID }}
+#      - run: npm run affected -- --target deploy ${AFFECTED_ARGS}
+#      - run: git rev-parse HEAD > dist/last-deploy.txt
+#      - save_cache:
+#          key: last-deploy-sha
+#          paths:
+#            - dist/last-deploy.txt
+
+  docker-deploy:
+    <<: *defaults
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "c8:b2:83:d7:1e:55:c2:01:ba:a9:46:16:4d:57:d7:4e"
+      - checkout
+      - restore_cache:
+          <<: *deploy_cache
+      - restore_cache:
+          key: dockerize-{{ .Environment.CIRCLE_WORKFLOW_ID }}
+      - run:
+          <<: *set_env
+      - run:
+          name: Deploy Over SSH
+          command: |
+            DATE_SHA=$(date +"%Y-%m-%d-")$(git rev-parse --short HEAD);
+            echo $DATE_SHA > latest-tag
+            if ! grep ${DEV_SERVER_IP} ~/.ssh/known_hosts > /dev/null
+            then
+              ssh-keyscan -t rsa $DEV_SERVER_IP | tee key-temp
+              cat key-temp >> ~/.ssh/known_hosts
+            fi
+            scp -r ./docker-build "circleci@$DEV_SERVER_IP:/home/circleci"
+            scp latest-tag "circleci@$DEV_SERVER_IP:/home/circleci/docker-build"
+            ssh circleci@$DEV_SERVER_IP 'TAG=$(cat /home/circleci/docker-build/latest-tag);
+            docker load --input "/home/circleci/docker-build/groot-ui-$TAG.tar";
+            docker tag groot-ui:$TAG groot-ui:latest'
+            ssh circleci@$DEV_SERVER_IP 'cd /var/www && docker-compose up -d'
+
+workflows:
+  version: 2
+  pr_check:
+    jobs:
+      - install
+      - lint:
+          requires:
+            - install
+      - test:
+          requires:
+            - install
+      - build:
+          requires:
+            - install
+      - dockerize:
+          filters:
+            branches:
+              only:
+                - develop
+          requires:
+            - build
+      - docker-deploy:
+          filters:
+            branches:
+              only:
+                - develop
+          requires:
+            - dockerize

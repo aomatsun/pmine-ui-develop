@@ -7,8 +7,10 @@ import { Route } from 'react-router-dom';
 import { GrootUiLanding } from '@groot/groot/ui/landing';
 import { GrootUiSwap } from '@groot/groot/ui/swap';
 import { GrootUiLiquidity } from '@groot/groot/ui/liquidity';
-import { GrootUiTreasury } from '@groot/groot/ui/treasury';
 import { Farming } from '@groot/groot/ui/farming';
+import { GrootUiTreasury } from '@groot/groot/ui/treasury';
+// import { LandingPage } from '../../../vdc/views/LandingPage/LandingPage';
+import { GrootUiYield } from '@groot/groot/ui/yield';
 import { Header } from '@groot/groot/components/header';
 import { GrootComponentsFooter } from '@groot/groot/components/footer';
 import { useSelector } from 'react-redux';
@@ -55,7 +57,10 @@ export const App = (props) => {
       <hr />
       <br />
 
-      <Route path="/" exact render={(props) => <GrootUiLanding {...props} />} />
+      <Route path="/" exact render={(props) => <GrootUiLanding onToggle={onConnect}
+        address={account ? account.address : null} {...props} />} />
+      {/* <Route path="/" exact render={(props) => <GrootUiLanding onToggle={onConnect}
+        account={account} {...props} />} /> */}
       <Route
         path="/swap"
         exact
@@ -71,7 +76,22 @@ export const App = (props) => {
         path="/treasury"
         exact
         render={(props) => <GrootUiTreasury {...props} />}
-      />
+        />
+      
+      <Route
+        path="/groyield"
+        exact
+        // render={(props) => <GrootUiYield {...props} />}
+        render={(props) => <GrootUiYield onToggle={onConnect}
+          address={account ? account.address : null} {...props} />}
+      />     
+      {/* <Route path="/vdc" component={LandingPage} /> */}
+      {/* <Route
+        path="/vdc"
+        exact
+        // render={(props) => <GrootUiYield {...props} />}
+        render={(props) => <LandingPage />}
+      />      */}
 
       <GrootComponentsFooter />
 

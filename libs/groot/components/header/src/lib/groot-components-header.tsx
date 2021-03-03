@@ -56,6 +56,9 @@ export function Header (props: HeaderProps) {
               <Link to="/treasury" className="nav-link">Treasury</Link>
             </Nav.Item>
             <Nav.Item>
+              <Link to="/groyield" className="nav-link">GRO Yield</Link>
+            </Nav.Item>
+            <Nav.Item>
               <Button variant="outline-info" onClick={props.onToggle}>{props.address ? parseAddress(props.address) : 'Connect'}</Button>
             </Nav.Item>
           </Nav>

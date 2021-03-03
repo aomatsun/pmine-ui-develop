@@ -31,6 +31,7 @@
     "groot-ui-landing": { "tags": [] },
     "groot-ui-swap": { "tags": [] },
     "groot-ui-treasury": { "tags": [] },
+    "groot-ui-yield": { "tags": [] },
     "groot-ui-liquidity": { "tags": [] },
     "groot-components-header": { "tags": [] },
     "groot-components-footer": { "tags": [] },

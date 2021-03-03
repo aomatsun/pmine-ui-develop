@@ -32,6 +32,7 @@
       "@groot/groot/ui/swap": ["libs/groot/ui/swap/src/index.ts"],
       "@groot/groot/ui/treasury": ["libs/groot/ui/treasury/src/index.ts"],
       "@groot/groot/ui/liquidity": ["libs/groot/ui/liquidity/src/index.ts"],
+      "@groot/groot/ui/yield": ["libs/groot/ui/yield/src/index.ts"],
       "@groot/groot/components/header": [
         "libs/groot/components/header/src/index.ts"
       ],

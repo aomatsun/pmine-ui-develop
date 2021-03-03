@@ -10,6 +10,7 @@ module.exports = {
     '<rootDir>/libs/groot/ui/swap',
     '<rootDir>/libs/groot/ui/treasury',
     '<rootDir>/libs/groot/ui/liquidity',
+    '<rootDir>/libs/groot/ui/yield',
     '<rootDir>/libs/groot/components/header',
     '<rootDir>/libs/groot/components/footer',
     '<rootDir>/libs/groot/ui/footer',

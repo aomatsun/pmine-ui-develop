@@ -305,6 +305,27 @@
         }
       }
     },
+    "groot-ui-yield": {
+      "root": "libs/groot/ui/yield",
+      "sourceRoot": "libs/groot/ui/yield/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/groot/ui/yield/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/groot/ui/yield"],
+          "options": {
+            "jestConfig": "libs/groot/ui/yield/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "groot-components-header": {
       "root": "libs/groot/components/header",
       "sourceRoot": "libs/groot/components/header/src",
