@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    environment:
+      - DEFAULT_HOST=perpetualdice.io
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+
+  groot-ui-default:
+    image: groot-ui:latest
+    environment:
+      - VIRTUAL_HOST=perpetualdice.io
+#
+#  groot-ui-local:
+#    image: groot-ui:latest
+#    environment:
+#      - VIRTUAL_HOST=localhost

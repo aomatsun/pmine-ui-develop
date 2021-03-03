@@ -1,0 +1,422 @@
+{
+  "version": 2,
+  "cli": { "defaultCollection": "@nrwl/react" },
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "style": "styled-components",
+        "linter": "eslint",
+        "babel": true
+      },
+      "component": { "style": "styled-components" },
+      "library": { "style": "styled-components", "linter": "eslint" }
+    }
+  },
+  "defaultProject": "groot-ui",
+  "projects": {
+    "shared-data-types-global": {
+      "root": "libs/shared/data-types/global",
+      "sourceRoot": "libs/shared/data-types/global/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/shared/data-types/global/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/data-types/global"],
+          "options": {
+            "jestConfig": "libs/shared/data-types/global/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-data-access-store": {
+      "root": "libs/shared/data-access/store",
+      "sourceRoot": "libs/shared/data-access/store/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/shared/data-access/store/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/data-access/store"],
+          "options": {
+            "jestConfig": "libs/shared/data-access/store/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-data-access-contracts": {
+      "root": "libs/shared/data-access/contracts",
+      "sourceRoot": "libs/shared/data-access/contracts/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/shared/data-access/contracts/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/data-access/contracts"],
+          "options": {
+            "jestConfig": "libs/shared/data-access/contracts/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-util": {
+      "root": "libs/shared/util",
+      "sourceRoot": "libs/shared/util/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/shared/util/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/util"],
+          "options": {
+            "jestConfig": "libs/shared/util/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-data-access-liquidity": {
+      "root": "libs/shared/data-access/liquidity",
+      "sourceRoot": "libs/shared/data-access/liquidity/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/shared/data-access/liquidity/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/data-access/liquidity"],
+          "options": {
+            "jestConfig": "libs/shared/data-access/liquidity/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "groot-ui": {
+      "root": "apps/groot-ui",
+      "sourceRoot": "apps/groot-ui/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/web:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/groot-ui",
+            "index": "apps/groot-ui/src/index.html",
+            "main": "apps/groot-ui/src/main.tsx",
+            "polyfills": "apps/groot-ui/src/polyfills.ts",
+            "tsConfig": "apps/groot-ui/tsconfig.app.json",
+            "assets": [
+              "apps/groot-ui/src/favicon.ico",
+              "apps/groot-ui/src/assets"
+            ],
+            "styles": [],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/groot-ui/src/environments/environment.ts",
+                  "with": "apps/groot-ui/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/web:dev-server",
+          "options": { "buildTarget": "groot-ui:build" },
+          "configurations": {
+            "production": { "buildTarget": "groot-ui:build:production" }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/groot-ui/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/groot-ui"],
+          "options": {
+            "jestConfig": "apps/groot-ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "docker": {
+          "executor": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              "DATE_SHA=$(date +\"%Y-%m-%d-\")$(git rev-parse --short HEAD); docker build -f ./apps/groot-ui/Dockerfile . -t groot-ui:${DATE_SHA}",
+              "DATE_SHA=$(date +\"%Y-%m-%d-\")$(git rev-parse --short HEAD); docker tag groot-ui:latest groot-ui:latest",
+              "docker save --output ./dist/groot-ui-latest.tar groot-ui:latest",
+              "DATE_SHA=$(date +\"%Y-%m-%d-\")$(git rev-parse --short HEAD); docker save --output ./dist/groot-ui-${DATE_SHA} groot-ui:${DATE_SHA}"
+            ],
+            "parallel": false
+          }
+        }
+      }
+    },
+    "groot-ui-e2e": {
+      "root": "apps/groot-ui-e2e",
+      "sourceRoot": "apps/groot-ui-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/groot-ui-e2e/cypress.json",
+            "tsConfig": "apps/groot-ui-e2e/tsconfig.e2e.json",
+            "devServerTarget": "groot-ui:serve"
+          },
+          "configurations": {
+            "production": { "devServerTarget": "groot-ui:serve:production" }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["apps/groot-ui-e2e/**/*.{js,ts}"] }
+        }
+      }
+    },
+    "groot-ui-landing": {
+      "root": "libs/groot/ui/landing",
+      "sourceRoot": "libs/groot/ui/landing/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/groot/ui/landing/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/groot/ui/landing"],
+          "options": {
+            "jestConfig": "libs/groot/ui/landing/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "groot-ui-swap": {
+      "root": "libs/groot/ui/swap",
+      "sourceRoot": "libs/groot/ui/swap/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/groot/ui/swap/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/groot/ui/swap"],
+          "options": {
+            "jestConfig": "libs/groot/ui/swap/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "groot-ui-treasury": {
+      "root": "libs/groot/ui/treasury",
+      "sourceRoot": "libs/groot/ui/treasury/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/groot/ui/treasury/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/groot/ui/treasury"],
+          "options": {
+            "jestConfig": "libs/groot/ui/treasury/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "groot-ui-liquidity": {
+      "root": "libs/groot/ui/liquidity",
+      "sourceRoot": "libs/groot/ui/liquidity/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/groot/ui/liquidity/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/groot/ui/liquidity"],
+          "options": {
+            "jestConfig": "libs/groot/ui/liquidity/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "groot-components-header": {
+      "root": "libs/groot/components/header",
+      "sourceRoot": "libs/groot/components/header/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/groot/components/header/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/groot/components/header"],
+          "options": {
+            "jestConfig": "libs/groot/components/header/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "groot-components-footer": {
+      "root": "libs/groot/components/footer",
+      "sourceRoot": "libs/groot/components/footer/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/groot/components/footer/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/groot/components/footer"],
+          "options": {
+            "jestConfig": "libs/groot/components/footer/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "groot-ui-landing-components-faq": {
+      "root": "libs/groot/ui/landing/components/faq",
+      "sourceRoot": "libs/groot/ui/landing/components/faq/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/groot/ui/landing/components/faq/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/groot/ui/landing/components/faq"],
+          "options": {
+            "jestConfig": "libs/groot/ui/landing/components/faq/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "groot-components-pool-card": {
+      "root": "libs/groot/components/pool-card",
+      "sourceRoot": "libs/groot/components/pool-card/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/groot/components/pool-card/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/groot/components/pool-card"],
+          "options": {
+            "jestConfig": "libs/groot/components/pool-card/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "groot-ui-farming": {
+      "root": "libs/groot/ui/farming",
+      "sourceRoot": "libs/groot/ui/farming/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/groot/ui/farming/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/groot/ui/farming"],
+          "options": {
+            "jestConfig": "libs/groot/ui/farming/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  }
+}

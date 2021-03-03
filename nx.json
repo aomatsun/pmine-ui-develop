@@ -1,0 +1,41 @@
+{
+  "npmScope": "groot",
+  "affected": { "defaultBase": "origin/develop" },
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "accessToken": "MGIzNTU4ZWMtNjJjYi00OGJiLWJiM2UtMDcxZGQzMTAyOTc1fHJlYWQtd3JpdGU=",
+        "cacheableOperations": ["build", "test", "lint", "e2e"],
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
+      }
+    }
+  },
+  "projects": {
+    "shared-data-types-global": { "tags": [] },
+    "shared-data-access-store": { "tags": [] },
+    "shared-data-access-contracts": { "tags": [] },
+    "shared-util": { "tags": [] },
+    "shared-data-access-liquidity": { "tags": [] },
+    "groot-ui": { "tags": [] },
+    "groot-ui-e2e": { "tags": [], "implicitDependencies": ["groot-ui"] },
+    "groot-ui-landing": { "tags": [] },
+    "groot-ui-swap": { "tags": [] },
+    "groot-ui-treasury": { "tags": [] },
+    "groot-ui-liquidity": { "tags": [] },
+    "groot-components-header": { "tags": [] },
+    "groot-components-footer": { "tags": [] },
+    "groot-ui-landing-components-faq": { "tags": [] },
+    "groot-components-pool-card": { "tags": [] },
+    "groot-ui-farming": { "tags": [] }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@groot/shared/data-types/global": [
+        "libs/shared/data-types/global/src/index.ts"
+      ],
+      "@groot/shared/data-access/store": [
+        "libs/shared/data-access/store/src/index.ts"
+      ],
+      "@groot/shared/data-access/contracts": [
+        "libs/shared/data-access/contracts/src/index.ts"
+      ],
+      "@groot/shared/util": ["libs/shared/util/src/index.ts"],
+      "@groot/shared/data-access/liquidity": [
+        "libs/shared/data-access/liquidity/src/index.ts"
+      ],
+      "@groot/groot/ui/landing": ["libs/groot/ui/landing/src/index.ts"],
+      "@groot/groot/ui/swap": ["libs/groot/ui/swap/src/index.ts"],
+      "@groot/groot/ui/treasury": ["libs/groot/ui/treasury/src/index.ts"],
+      "@groot/groot/ui/liquidity": ["libs/groot/ui/liquidity/src/index.ts"],
+      "@groot/groot/components/header": [
+        "libs/groot/components/header/src/index.ts"
+      ],
+      "@groot/groot/components/footer": [
+        "libs/groot/components/footer/src/index.ts"
+      ],
+      "@groot/groot/ui/landing/components/faq": [
+        "libs/groot/ui/landing/components/faq/src/index.ts"
+      ],
+      "@groot/groot/components/pool-card": [
+        "libs/groot/components/pool-card/src/index.ts"
+      ],
+      "@groot/groot/ui/farming": ["libs/groot/ui/farming/src/index.ts"],
+      "crypto": ["node_modules/crypto-browserify"],
+      "http": ["node_modules/stream-http"],
+      "https": ["node_modules/https-browserify"],
+      "os": ["node_modules/os-browserify"],
+      "stream": ["node_modules/stream-browserify"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
