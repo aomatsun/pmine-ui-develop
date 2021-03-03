@@ -63,7 +63,8 @@ export const App = (props) => {
       <Route
         path="/swap"
         exact
-        render={(props) => <GrootUiSwap {...props} />}
+        render={(props) => <GrootUiSwap onToggle={onConnect}
+          address={account ? account.address : null} {...props} />}
       />
       <Route
         path="/liquidity"
