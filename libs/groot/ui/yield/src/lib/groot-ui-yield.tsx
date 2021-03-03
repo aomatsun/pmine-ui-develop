@@ -1,6 +1,7 @@
 import React from 'react';
 import { Modal } from 'react-bootstrap';
 import styled from 'styled-components';
+import { Header } from '@groot/groot/components/header';
 import {
   AreaChart,
   Area,
@@ -9,8 +10,15 @@ import {
   CartesianGrid,
   ResponsiveContainer
 } from 'recharts';
+
+import backImage from "../../assets/images/vdc-background.jpg";
+
+
 /* eslint-disable-next-line */
-export interface GrootUiYieldProps {}
+export interface GrootUiYieldProps {
+  onToggle: () => void,
+  address: string, 
+}
 
 const data = [
   {
@@ -57,6 +65,15 @@ const data = [
   },
 ];
 
+
+const StyledGrootUi = styled.div`
+  background-image: url("../../assets/images/vdc-background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #cccccc;
+`;
+
 const StyledGrootUiYield = styled.div`
   color: white;
   text-align: center;
@@ -89,102 +106,110 @@ const StyledGrootUiYield = styled.div`
 
 export function GrootUiYield(props: GrootUiYieldProps) {
   return (
-    <StyledGrootUiYield>
-      <Modal.Dialog className="dialog" >
-        <Modal.Header >
-          <Modal.Title>Coming Soon</Modal.Title>
-        </Modal.Header>
+    <StyledGrootUi>
+      <Header onToggle={props.onToggle} address={props.address} />
 
-        <Modal.Body>
-          <p>This feature is still under development and is currently unavailable.  Please connect with us on telegram to stay updated.</p>
-        </Modal.Body>
+      <br />
+      <hr />
+      <br />
+
+      <StyledGrootUiYield>
+        <Modal.Dialog className="dialog" >
+          <Modal.Header >
+            <Modal.Title>Coming Soon</Modal.Title>
+          </Modal.Header>
+
+          <Modal.Body>
+            <p>This feature is still under development and is currently unavailable.  Please connect with us on telegram to stay updated.</p>
+          </Modal.Body>
 
 
-      </Modal.Dialog>
+        </Modal.Dialog>
 
 
-      <div className="treasury-table">
-        <div className="row treasury-values">
-          <div className="col-md-2">
-            0.00 gROOT
+        <div className="treasury-table">
+          <div className="row treasury-values">
+            <div className="col-md-2">
+              0.00 gROOT
+            </div>
+            <div className="col-md-2">
+              $ 0.00
+            </div>
+            <div className="col-md-2">
+              0 %
+            </div>
+            <div className="col-md-2">
+              $ 0.00
+            </div>
+            <div className="col-md-2">
+              $ 0.00
+            </div>
+            <div className="col-md-2">
+              0
+            </div>
           </div>
-          <div className="col-md-2">
-            $ 0.00
-          </div>
-          <div className="col-md-2">
-            0 %
-          </div>
-          <div className="col-md-2">
-            $ 0.00
-          </div>
-          <div className="col-md-2">
-            $ 0.00
-          </div>
-          <div className="col-md-2">
-            0
+
+          <div className="row treasury-labels">
+            <div className="col-md-2">
+              Current Price Swap
+            </div>
+            <div className="col-md-2">
+              gROOT Price
+            </div>
+            <div className="col-md-2">
+              Total Supply
+            </div>
+            <div className="col-md-2">
+              Marketcap
+            </div>
+            <div className="col-md-2">
+              Treasury Value
+            </div>
+            <div className="col-md-2">
+              Treasury Ratio
+            </div>
           </div>
         </div>
+        <hr/>
+        <ResponsiveContainer width="99%" aspect={2}>
+        <AreaChart
+          data={data}
+          margin={{
+            top: 10,
+            right: 0,
+            left: 0,
+            bottom: 0,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" hide/>
+          <YAxis hide/>
 
-        <div className="row treasury-labels">
-          <div className="col-md-2">
-            Current Price Swap
-          </div>
-          <div className="col-md-2">
-            gROOT Price
-          </div>
-          <div className="col-md-2">
-            Total Supply
-          </div>
-          <div className="col-md-2">
-            Marketcap
-          </div>
-          <div className="col-md-2">
-            Treasury Value
-          </div>
-          <div className="col-md-2">
-            Treasury Ratio
-          </div>
-        </div>
-      </div>
-      <hr/>
-      <ResponsiveContainer width="99%" aspect={2}>
-      <AreaChart
-        data={data}
-        margin={{
-          top: 10,
-          right: 0,
-          left: 0,
-          bottom: 0,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" hide/>
-        <YAxis hide/>
-
-        <Area
-          type="monotone"
-          dataKey="uv"
-          stackId="1"
-          stroke="gold"
-          fill="gold"
-        />
-        <Area
-          type="monotone"
-          dataKey="pv"
-          stackId="1"
-          stroke="#17a2b8"
-          fill="#17a2b8"
-        />
-        <Area
-          type="monotone"
-          dataKey="amt"
-          stackId="1"
-          stroke="purple"
-          fill="purple"
-        />
-      </AreaChart>
-      </ResponsiveContainer>
-    </StyledGrootUiYield>
+          <Area
+            type="monotone"
+            dataKey="uv"
+            stackId="1"
+            stroke="gold"
+            fill="gold"
+          />
+          <Area
+            type="monotone"
+            dataKey="pv"
+            stackId="1"
+            stroke="#17a2b8"
+            fill="#17a2b8"
+          />
+          <Area
+            type="monotone"
+            dataKey="amt"
+            stackId="1"
+            stroke="purple"
+            fill="purple"
+          />
+        </AreaChart>
+        </ResponsiveContainer>
+      </StyledGrootUiYield>
+    </StyledGrootUi>
   );
 }
 
