@@ -2,8 +2,14 @@ import React from 'react';
 
 import styled from 'styled-components';
 
+import { Header } from '@groot/groot/components/header';
+import GlobalStyle from 'apps/groot-ui/src/assets/global-styles';
+
 /* eslint-disable-next-line */
-export interface GrootUiSwapProps {}
+export interface GrootUiSwapProps {
+  onToggle: () => void,
+  address: string, 
+}
 
 const StyledGrootUiSwap = styled.div`
   color: white;
@@ -20,10 +26,20 @@ const StyledGrootUiSwap = styled.div`
 
 export function GrootUiSwap(props: GrootUiSwapProps) {
   return (
-    <StyledGrootUiSwap>
-      <h1>Start Swapping with Pancake Swap</h1>
-      <iframe src="https://exchange.pancakeswap.finance/#/swap?inputCurrency=BNB&outputCurrency=0x8b571fe684133aca1e926beb86cb545e549c832d" title="Pancake Swap"></iframe>
-    </StyledGrootUiSwap>
+    <div>
+      <Header onToggle={props.onToggle} address={props.address} />
+
+      <br />
+      <hr />
+      <br />
+
+      <StyledGrootUiSwap>
+        <h1>Start Swapping with Pancake Swap</h1>
+        <iframe src="https://exchange.pancakeswap.finance/#/swap?inputCurrency=BNB&outputCurrency=0x8b571fe684133aca1e926beb86cb545e549c832d" title="Pancake Swap"></iframe>
+      </StyledGrootUiSwap>
+      <GlobalStyle />
+
+    </div>
   );
 }
 
