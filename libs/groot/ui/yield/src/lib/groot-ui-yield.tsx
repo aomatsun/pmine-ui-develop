@@ -3,7 +3,7 @@ import { Modal } from 'react-bootstrap';
 import { Header } from '@groot/groot/components/header';
 
 import styled from 'styled-components';
-import GlobalStyle from '../../assets/yield-styles';
+import GlobalStyle from '../assets/yield-styles';
 
 
 // import '../assets/stylesheets/block-library-style.min.css';
