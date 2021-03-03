@@ -9,7 +9,6 @@ import { GrootUiSwap } from '@groot/groot/ui/swap';
 import { GrootUiLiquidity } from '@groot/groot/ui/liquidity';
 import { Farming } from '@groot/groot/ui/farming';
 import { GrootUiTreasury } from '@groot/groot/ui/treasury';
-// import { LandingPage } from '../../../vdc/views/LandingPage/LandingPage';
 import { GrootUiYield } from '@groot/groot/ui/yield';
 import { Header } from '@groot/groot/components/header';
 import { GrootComponentsFooter } from '@groot/groot/components/footer';
@@ -48,14 +47,14 @@ export const App = (props) => {
 
   return (
     <StyledApp id="app">
-      <Header onToggle={onConnect} address={account ? account.address : null} />
+      {/* <Header onToggle={onConnect} address={account ? account.address : null} /> */}
 
       {/* START: routes */}
       {/* These routes and navigation have been generated for you */}
       {/* Feel free to move and update them to fit your needs */}
-      <br />
+      {/* <br />
       <hr />
-      <br />
+      <br /> */}
 
       <Route path="/" exact render={(props) => <GrootUiLanding onToggle={onConnect}
         address={account ? account.address : null} {...props} />} />
@@ -81,22 +80,14 @@ export const App = (props) => {
       <Route
         path="/groyield"
         exact
-        // render={(props) => <GrootUiYield {...props} />}
         render={(props) => <GrootUiYield onToggle={onConnect}
           address={account ? account.address : null} {...props} />}
       />     
-      {/* <Route path="/vdc" component={LandingPage} /> */}
-      {/* <Route
-        path="/vdc"
-        exact
-        // render={(props) => <GrootUiYield {...props} />}
-        render={(props) => <LandingPage />}
-      />      */}
 
       <GrootComponentsFooter />
 
       {/* END: routes */}
-      <GlobalStyle />
+      {/* <GlobalStyle /> */}
     </StyledApp>
   );
 };
