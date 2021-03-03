@@ -15,7 +15,7 @@ import { Header } from '@groot/groot/components/header';
 import '../assets/stylesheets/block-library-style.min.css';
 import '../assets/stylesheets/contact-form-styless.css';
 import '../assets/stylesheets/dashicons.min.css';
-import '../assets/stylesheets/bootstrap/bootstrap.min.css';
+// import '../assets/stylesheets/bootstrap/bootstrap.min.css';
 import '../assets/stylesheets/animate.min.css';
 import '../assets/stylesheets/magnific-popup/magnific-popup.css';
 import '../assets/stylesheets/font-awesome/css/font-awesome.min.css';
@@ -108,6 +108,10 @@ const StyledGrootUi = styled.div`
   background-size: cover;
   background-color: #cccccc;
 `;
+const StyledGrootBoot = styled.div`
+  @media (min-width:992px){.navbar{border-radius:4px}}@media (min-width:992px){.navbar-header{float:left}}.navbar-collapse{overflow-x:visible;padding-right:15px;padding-left:15px;border-top:1px solid transparent;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.1);box-shadow:inset 0 1px 0 rgba(255,255,255,0.1);-webkit-overflow-scrolling:touch}.navbar-collapse.in{overflow-y:auto}@media (min-width:992px){.navbar-collapse{width:auto;border-top:0;-webkit-box-shadow:none;box-shadow:none}.navbar-collapse.collapse{display:block !important;visibility:visible !important;height:auto !important;padding-bottom:0;overflow:visible !important}.navbar-collapse.in{overflow-y:visible}.navbar-fixed-top .navbar-collapse,.navbar-static-top .navbar-collapse,.navbar-fixed-bottom .navbar-collapse{padding-left:0;padding-right:0}}.navbar-fixed-top .navbar-collapse,.navbar-fixed-bottom .navbar-collapse{max-height:340px}@media (max-device-width:480px) and (orientation:landscape){.navbar-fixed-top .navbar-collapse,.navbar-fixed-bottom .navbar-collapse{max-height:200px}}.container>.navbar-header,.container-fluid>.navbar-header,.container>.navbar-collapse,.container-fluid>.navbar-collapse{margin-right:-15px;margin-left:-15px}@media (min-width:992px){.container>.navbar-header,.container-fluid>.navbar-header,.container>.navbar-collapse,.container-fluid>.navbar-collapse{margin-right:0;margin-left:0}}.navbar-static-top{z-index:1000;border-width:0 0 1px}@media (min-width:992px){.navbar-static-top{border-radius:0}}.navbar-fixed-top,.navbar-fixed-bottom{position:fixed;right:0;left:0;z-index:1030}@media (min-width:992px){.navbar-fixed-top,.navbar-fixed-bottom{border-radius:0}}.navbar-fixed-top{top:0;border-width:0 0 1px}.navbar-fixed-bottom{bottom:0;margin-bottom:0;border-width:1px 0 0}.navbar-brand{float:left;padding:15px 15px;font-size:18px;line-height:20px;height:50px}.navbar-brand:hover,.navbar-brand:focus{text-decoration:none}.navbar-brand>img{display:block}@media (min-width:992px){.navbar>.container .navbar-brand,.navbar>.container-fluid .navbar-brand{margin-left:-15px}}.navbar-toggle{position:relative;float:right;margin-right:15px;padding:9px 10px;margin-top:8px;margin-bottom:8px;background-color:transparent;background-image:none;border:1px solid transparent;border-radius:4px}.navbar-toggle:focus{outline:0}.navbar-toggle .icon-bar{display:block;width:22px;height:2px;border-radius:1px}.navbar-toggle .icon-bar+.icon-bar{margin-top:4px}@media (min-width:992px){.navbar-toggle{display:none}}.navbar-nav{margin:7.5px -15px}.navbar-nav>li>a{padding-top:10px;padding-bottom:10px;line-height:20px}@media (max-width:991px){.navbar-nav .open .dropdown-menu{position:static;float:none;width:auto;margin-top:0;background-color:transparent;border:0;-webkit-box-shadow:none;box-shadow:none}.navbar-nav .open .dropdown-menu>li>a,.navbar-nav .open .dropdown-menu .dropdown-header{padding:5px 15px 5px 25px}.navbar-nav .open .dropdown-menu>li>a{line-height:20px}.navbar-nav .open .dropdown-menu>li>a:hover,.navbar-nav .open .dropdown-menu>li>a:focus{background-image:none}}@media (min-width:992px){.navbar-nav{float:left;margin:0}.navbar-nav>li{float:left}.navbar-nav>li>a{padding-top:15px;padding-bottom:15px}}.navbar-form{margin-left:-15px;margin-right:-15px;padding:10px 15px;border-top:1px solid transparent;border-bottom:1px solid transparent;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.1),0 1px 0 rgba(255,255,255,0.1);box-shadow:inset 0 1px 0 rgba(255,255,255,0.1),0 1px 0 rgba(255,255,255,0.1);margin-top:8px;margin-bottom:8px}
+`;
+
 
 
 const StyledGrootUiYield = styled.div`
@@ -156,13 +160,15 @@ export function GrootUiYield(props: GrootUiYieldProps) {
               </div>
           </div>
           <div className="row text-center margin-auto" style={{paddingTop: '25px'}}>
-              <div className="col-md-6 col-md-offset-3 vdc-balance-div">
+              <div className="col-md-6 col-md-offset-3 vdc-balance-div margin-auto" style={{width:'25%'}}>
+              <StyledGrootBoot>
                   <p className="text-white margin-bottom-zero" style={{display: 'flex',justifyContent: 'space-between'}}>IOST
                       Balance : <span id="iostBalance">0</span></p>
                   <p className="text-white margin-bottom-zero" style={{display: 'flex',justifyContent: 'space-between'}}>PMINE
                       Balance : <span id="pmineBalance">0</span></p>
                   <p className="text-white margin-bottom-zero" style={{display: 'flex',justifyContent: 'space-between'}}>PER
                       Balance : <span id="perBalance">0</span></p>
+                      </StyledGrootBoot>
               </div>
           </div>
           <div className="row margin-auto">
@@ -211,14 +217,14 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                               </div>
 
                               <div className="row text-center">
-                                  <div className="col-md-6 col-md-offset-3">
+                                  <div className="col-md-12 col-md-offset-3">
                                       <b className="loans-page_orange-color">YOUR HOLDINGS</b>
                                       <br/>
                                   </div>
                               </div>
 
                               <div className="row text-center">
-                                  <div className="col-md-6 col-md-offset-3" id="pmine-holdings-1">
+                                  <div className="col-md-12 col-md-offset-3" id="pmine-holdings-1">
                                       <p className="loans-page_orange-color"><span
                                                   id="vdc1-holding-pmine">0.00000000</span> PMINE</p>
                                   </div>
@@ -232,7 +238,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                  
 
                                   <div className="row text-center">
-                                      <div className="col-md-6 col-md-offset-3">
+                                      <div className="col-md-12 col-md-offset-3">
                                           <b className="loans-page_orange-color">YOUR REWARDS</b>
                                           <br/>
                                       </div>
@@ -310,14 +316,14 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                               </div>
 
                               <div className="row text-center">
-                                  <div className="col-md-6 col-md-offset-3">
+                                  <div className="col-md-12 col-md-offset-3">
                                       <b className="loans-page_orange-color">YOUR HOLDINGS</b>
                                       <br/>
                                   </div>
                               </div>
 
                               <div className="row text-center">
-                                  <div className="col-md-6 col-md-offset-3" id="pmine-holdings-1">
+                                  <div className="col-md-12 col-md-offset-3" id="pmine-holdings-1">
                                       <p className="loans-page_orange-color"><span
                                                   id="vdc2-holding-pmine">0.00000000</span> PMINE</p>
                                   </div>
@@ -330,16 +336,24 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                   </a>
                                 
                                   <div className="row text-center">
-                                      <div className="col-md-6 col-md-offset-3">
+                                      <div className="col-md-12 col-md-offset-3">
                                           <b className="loans-page_orange-color">YOUR REWARDS</b>
                                           <br/>
                                       </div>
                                   </div>
 
                                   <div className="row text-center">
-                                      <div className="col-md-4 col-md-offset-4" id="unclaimed-pmine-1">
+                                      <div className="col-md-4">
                                           <p className="loans-page_orange-color" style={{marginBottom: '0px'}}>PMINE</p>
-                                          <p className="loans-page_orange-color" id="vdc2-pmine-reward">0.00000000</p>
+                                          <p className="loans-page_orange-color" id="vdc1-pmine-reward">0.00000000</p>
+                                      </div>
+                                      <div className="col-md-4">
+                                          <p className="loans-page_orange-color" style={{marginBottom: '0px'}}>IOST</p>
+                                          <p className="loans-page_orange-color" id="vdc1-iost-reward">0.00000000</p>
+                                      </div>
+                                      <div className="col-md-4">
+                                          <p className="loans-page_orange-color" style={{marginBottom: '0px'}}>PER</p>
+                                          <p className="loans-page_orange-color" id="vdc1-per-reward">0.00000000</p>
                                       </div>
                                   </div>
                               </div>
@@ -357,7 +371,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                   </div>
               </div>
           </div>
-      <div style={{margin:'auto'}}>
+      <div className = "row margin-auto">
         <div className="col-xs-4 col-sm-4 col-md-3 text-center">
           <table className="table-dark richlist-table margin-auto">
             <thead>
@@ -384,7 +398,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
         </div>
         <div className="col-xs-4 col-sm-4 col-md-6 text-center">
           <p className="loans-page_orange-color">
-            <span style={{fontSize: '1.3rem', fontWeight: 'bold'}}>PMINE Virtual Deposit Contract fee's and information</span><br/>
+            <span style={{fontSize: '1.1rem', fontWeight: 'bold'}}>PMINE Virtual Deposit Contract fee's and information</span><br/>
               Compound VDC fees are 11% in and 11% out, they<br/>
               are distributed in the following way:<br/>
               8% to drip pool<br/>
