@@ -58,23 +58,25 @@ export const App = (props) => {
 
       <Route path="/" exact render={(props) => <GrootUiLanding onToggle={onConnect}
         address={account ? account.address : null} {...props} />} />
-      {/* <Route path="/" exact render={(props) => <GrootUiLanding onToggle={onConnect}
-        account={account} {...props} />} /> */}
       <Route
         path="/swap"
         exact
-        render={(props) => <GrootUiSwap {...props} />}
+        render={(props) => <GrootUiSwap onToggle={onConnect}
+          address={account ? account.address : null} {...props} />}
       />
       <Route
         path="/liquidity"
         exact
-        render={(props) => <GrootUiLiquidity {...props} />}
+        render={(props) => <GrootUiLiquidity onToggle={onConnect}
+          address={account ? account.address : null} {...props} />}
       />
-      <Route path="/farming" exact render={(props) => <Farming {...props} />} />
+      <Route path="/farming" exact render={(props) => <Farming onToggle={onConnect}
+        address={account ? account.address : null} {...props} />} />
       <Route
         path="/treasury"
         exact
-        render={(props) => <GrootUiTreasury {...props} />}
+        render={(props) => <GrootUiTreasury onToggle={onConnect}
+          address={account ? account.address : null} {...props} />}
         />
       
       <Route

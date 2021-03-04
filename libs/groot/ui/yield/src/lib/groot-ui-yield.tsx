@@ -5,14 +5,6 @@ import { Header } from '@groot/groot/components/header';
 import styled from 'styled-components';
 import GlobalStyle from '../assets/yield-styles';
 
-
-// import '../assets/stylesheets/block-library-style.min.css';
-// import '../assets/stylesheets/contact-form-styless.css';
-// import '../assets/stylesheets/dashicons.min.css';
-// import '../assets/stylesheets/bootstrap/bootstrap.min.css';
-// import '../assets/stylesheets/animate.min.css';
-// import '../assets/stylesheets/magnific-popup/magnific-popup.css';
-// import '../assets/stylesheets/font-awesome/css/font-awesome.min.css';
 import "../assets/stylesheets/custom.css";
 
 import vdcCompound from "../assets/images/vdc-compound.png";
