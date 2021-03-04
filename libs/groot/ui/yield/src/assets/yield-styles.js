@@ -34,20 +34,35 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  h1 {
-    font-family: 'Poppins','Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 28px;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+      padding: 0;
+      margin-bottom: 2em;
+      margin-top: 0;
+      padding-top: 0;
+      line-height: 1.25;
+      font-family: 'Exo 2', sans-serif;
+      font-weight: 600;
+      color: #746981;
   }
+  // h1 {
+  //   font-family: 'Poppins','Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  //   font-size: 28px;
+  // }
 
-  h2 {
-    color: white;
-    font-family: 'Poppins','Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 22px;
-  }
+  // h2 {
+  //   color: white;
+  //   font-family: 'Poppins','Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  //   font-size: 22px;
+  // }
 
   p,
   label {
-    font-family: 'Poppins', Georgia, Times, 'Times New Roman', serif;
+    // font-family: 'Poppins', Georgia, Times, 'Times New Roman', serif;
   }
 
 
