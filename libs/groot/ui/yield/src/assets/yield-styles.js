@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
   #app {
     min-height: 100vh;
     min-width: 300px;
-    width: 60%;
+    width: 100%;
   }
 
   @media only screen and (max-width: 1200px) {
