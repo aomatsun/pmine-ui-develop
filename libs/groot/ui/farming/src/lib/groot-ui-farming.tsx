@@ -12,14 +12,8 @@ import {
   tokens,
 } from '../../../../../shared/util/src/lib/contractIDs';
 
-import { Header } from '@groot/groot/components/header';
-import GlobalStyle from 'apps/groot-ui/src/assets/global-styles';
-
 /* eslint-disable-next-line */
-export interface GrootUiFarmingProps {
-  onToggle: () => void,
-  address: string, 
-}
+export interface GrootUiFarmingProps {}
 
 const StyledGrootUiFarming = styled.div`
   display: flex;
@@ -304,12 +298,6 @@ export function Farming(props: GrootUiFarmingProps) {
 
   return (
     <div>
-      <Header onToggle={props.onToggle} address={props.address} />
-
-      <br />
-      <hr />
-      <br />
-
       <StyledGrootUiFarming>
         <PoolStyledContainers>
           <h2>Manual Compound Farming</h2>
@@ -373,7 +361,7 @@ export function Farming(props: GrootUiFarmingProps) {
         message={statusMessage}
       />
 
-      <GlobalStyle />
+
     </div>
   );
 }

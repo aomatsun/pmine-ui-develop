@@ -3,14 +3,8 @@ import styled from 'styled-components';
 import { DynamicModuleLoader } from 'redux-dynamic-modules';
 import { getLiquidityModule } from '@groot/shared/data-access/liquidity';
 
-import { Header } from '@groot/groot/components/header';
-import GlobalStyle from 'apps/groot-ui/src/assets/global-styles';
-
 /* eslint-disable-next-line */
-export interface GrootUiLiquidityProps {
-  onToggle: () => void,
-  address: string, 
-}
+export interface GrootUiLiquidityProps {}
 
 const StyledGrootUiLiquidity = styled.div`
   color: white;
@@ -27,25 +21,15 @@ const StyledGrootUiLiquidity = styled.div`
 
 export function GrootUiLiquidity(props: GrootUiLiquidityProps) {
   return (
-    <div>
-      <Header onToggle={props.onToggle} address={props.address} />
-
-      <br />
-      <hr />
-      <br />
-
-      <DynamicModuleLoader modules={[getLiquidityModule()]}>
-        <StyledGrootUiLiquidity>
-          <h1>Join a Pool on Pancake Swap</h1>
-          <iframe
-            src="https://exchange.pancakeswap.finance/#/add/ETH/0x8b571fe684133aca1e926beb86cb545e549c832d"
-            title="Pancake Swap"
-          ></iframe>
-        </StyledGrootUiLiquidity>
-      </DynamicModuleLoader>
-
-      <GlobalStyle />
-    </div>
+    <DynamicModuleLoader modules={[getLiquidityModule()]}>
+      <StyledGrootUiLiquidity>
+        <h1>Join a Pool on Pancake Swap</h1>
+        <iframe
+          src="https://exchange.pancakeswap.finance/#/add/ETH/0x8b571fe684133aca1e926beb86cb545e549c832d"
+          title="Pancake Swap"
+        ></iframe>
+      </StyledGrootUiLiquidity>
+    </DynamicModuleLoader>
   );
 }
 

@@ -12,7 +12,6 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background-color: #150f1e;
-    background-image: url(${backImage});
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;    

@@ -1,10 +1,19 @@
 import React from 'react';
 import { Modal } from 'react-bootstrap';
 import { Header } from '@groot/groot/components/header';
+import { Button } from 'react-bootstrap';
 
 import styled from 'styled-components';
 import GlobalStyle from '../assets/yield-styles';
 
+
+// import '../assets/stylesheets/block-library-style.min.css';
+// import '../assets/stylesheets/contact-form-styless.css';
+// import '../assets/stylesheets/dashicons.min.css';
+// import '../assets/stylesheets/bootstrap/bootstrap.min.css';
+// import '../assets/stylesheets/animate.min.css';
+// import '../assets/stylesheets/magnific-popup/magnific-popup.css';
+// import '../assets/stylesheets/font-awesome/css/font-awesome.min.css';
 import "../assets/stylesheets/custom.css";
 
 import vdcCompound from "../assets/images/vdc-compound.png";
@@ -15,6 +24,67 @@ export interface GrootUiYieldProps {
   address: string, 
 }
 
+const StyledPoolCard = styled.div`
+  border: 1px solid #17a2b8;
+  border-radius: 10px;
+  background-color: rgb(40, 37, 47);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  color: white;
+  
+  > div {
+    flex: 2;
+  }
+
+  > hr {
+    border-color: #17a2b8;
+    width: 80%;
+    flex: 1;
+  }
+
+  > .row {
+    text-align: left;
+    width: 100%;
+    flex: 2;
+  }
+
+  > .row  .pc-col-1 {
+    text-align: left;
+  }
+
+  > .row  .pc-col-2 {
+    text-align: right;
+  }
+
+  > .row .col-md-6 .lp-btn {
+
+    width: 100%;
+    min-width: 90px;
+  }
+
+  > .row .col-md-6 .lp-btn:hover {
+    width: 100%;
+  }
+
+ 
+
+  @media only screen and (max-width: 800px) {
+    flex-direction: column;
+    width: 80%;
+    height: 500px;
+    > .row  .pc-col-1 {
+      text-align: center;
+    }
+
+    > .row  .pc-col-2 {
+      text-align: center;
+    }
+  }
+`;
 const compound= [
   { address: "ry26ds*",  amount: "1.78", staked: "71.15%"},
   { address: "master*",  amount: "0.67", staked: "26.74%"},
@@ -42,12 +112,7 @@ const volatile= [
 
 export function GrootUiYield(props: GrootUiYieldProps) {
   return (
-    <div>
-      <Header onToggle={props.onToggle} address={props.address} />
-    
-      <br />
-      <hr />
-      <br />
+    <div> 
       <div className="Uniswap container" style={{paddingTop:'0%'}}>
         <div className="row text-center margin-auto">
                 <div className="col-md-12">
@@ -77,7 +142,8 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                     <div className="row text-center vdc-alert" id="statusVDC1Msg">
                     </div>
 
-                    <div className="uniswap-container">
+                    <div className="uniswap-container" style={{background:'transparent'}}>
+                     <StyledPoolCard>
                         <div className="swap">
                             <form action="" autoComplete="off">
                                 <div className="containers">
@@ -85,12 +151,13 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                         <div className="col-md-4 col-sm-12">
                                             <input type="number" placeholder="0.0" id="vdc1-deposit-amount" />
                                             <br />
-                                            <div align-center="center" style={{marginTop: '10px'}}>
+                                            {/* <div align-center="center" style={{marginTop: '10px'}}>
                                                 <a href="javascript:void(0);" className="rocket-button gold-rocket-button"
                                                   id="vdc1-deposit-btn">
                                                     <div className="default">Deposit</div>
                                                 </a>
-                                            </div>
+                                            </div> */}
+                                            {' '}<Button className="lp-btn" style={{marginTop: '10px'}} variant="outline-info" >Deposit</Button>{' '}
                                         </div>
 
                                         <div className="col-md-4 col-sm-12">
@@ -100,61 +167,64 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                         <div className="col-md-4 col-sm-12">
                                             <input type="number" placeholder="0.0" id="vdc1-withdraw-amount" />
                                             <br/>
-                                            <div align-center="center" style={{marginTop: '10px'}}>
+                                            {/* <div align-center="center" style={{marginTop: '10px'}}>
                                                 <a href="javascript:void(0);" className="rocket-button gold-rocket-button"
                                                   id="vdc1-withdraw-btn">
                                                     <div className="default">Withdraw</div>
                                                 </a>
-                                            </div>
+                                            </div> */}
+                                            {' '}<Button className="lp-btn" style={{marginTop: '10px'}} variant="outline-success" >WithDraw </Button>{' '}
                                         </div>
                                     </div>
                                 </div>
 
                                 <div className="row text-center">
                                     <div className="col-md-12 col-md-offset-3">
-                                        <b className="loans-page_orange-color">YOUR HOLDINGS</b>
+                                        <b className=" orange-to-white">YOUR HOLDINGS</b>
                                         <br/>
                                     </div>
                                 </div>
 
                                 <div className="row text-center">
                                     <div className="col-md-12 col-md-offset-3" id="pmine-holdings-1">
-                                        <p className="loans-page_orange-color"><span
+                                        <p className=" orange-to-white"><span
                                                     id="vdc1-holding-pmine">0.00000000</span> PMINE</p>
                                     </div>
                                 </div>
 
                                 <div align-center="center">
-                                    <a href="javascript:void(0);" className="rocket-button gold-rocket-button"
+                                    {/* <a href="javascript:void(0);" className="rocket-button gold-rocket-button"
                                       id="vdc1-claim-btn">
                                         <div className="default">CLAIM REWARDS</div>
-                                    </a>
+                                    </a> */}
+                                    {' '}<Button className="lp-btn" variant="outline-success" >CLAIM REWARDS </Button>{' '}
                                   
 
                                     <div className="row text-center">
                                         <div className="col-md-12 col-md-offset-3">
-                                            <b className="loans-page_orange-color">YOUR REWARDS</b>
+                                            <b className=" orange-to-white">YOUR REWARDS</b>
                                             <br/>
                                         </div>
                                     </div>
 
                                     <div className="row text-center">
                                         <div className="col-md-4">
-                                            <p className="loans-page_orange-color" style={{marginBottom: '0px'}}>PMINE</p>
-                                            <p className="loans-page_orange-color" id="vdc1-pmine-reward">0.00000000</p>
+                                            <p className=" orange-to-white" style={{marginBottom: '0px'}}>PMINE</p>
+                                            <p className=" orange-to-white" id="vdc1-pmine-reward">0.00000000</p>
                                         </div>
                                         <div className="col-md-4">
-                                            <p className="loans-page_orange-color" style={{marginBottom: '0px'}}>IOST</p>
-                                            <p className="loans-page_orange-color" id="vdc1-iost-reward">0.00000000</p>
+                                            <p className=" orange-to-white" style={{marginBottom: '0px'}}>IOST</p>
+                                            <p className=" orange-to-white" id="vdc1-iost-reward">0.00000000</p>
                                         </div>
                                         <div className="col-md-4">
-                                            <p className="loans-page_orange-color" style={{marginBottom: '0px'}}>PER</p>
-                                            <p className="loans-page_orange-color" id="vdc1-per-reward">0.00000000</p>
+                                            <p className=" orange-to-white" style={{marginBottom: '0px'}}>PER</p>
+                                            <p className=" orange-to-white" id="vdc1-per-reward">0.00000000</p>
                                         </div>
                                     </div>
                                 </div>
                             </form>
                         </div>
+                      </StyledPoolCard>
                     </div>
                     <div className="row text-center">
                         <div className="col-md-12">
@@ -164,7 +234,9 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                             </p>
                         </div>
                     </div>
+                    
                 </div>
+
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <div className="row text-center">
                         <div className="col-md-12">
@@ -176,7 +248,8 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                     <div className="row text-center vdc-alert" id="statusVDC2Msg">
                     </div>
 
-                    <div className="uniswap-container">
+                    <div className="uniswap-container" style={{background:'transparent'}}>
+                      <StyledPoolCard>
                         <div className="swap">
                             <form action="" autoComplete="off">
                                 <div className="containers">
@@ -184,12 +257,14 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                         <div className="col-md-4 col-sm-12">
                                             <input type="number" placeholder="0.0" id="vdc2-deposit-amount" />
                                             <br/>
-                                            <div align-center="center" style={{marginTop: '10px'}}>
+                                            {/* <div align-center="center" style={{marginTop: '10px'}}>
                                                 <a href="javascript:void(0);" className="rocket-button gold-rocket-button"
                                                   id="vdc2-deposit-btn">
+                                                      
                                                     <div className="default">Deposit</div>
                                                 </a>
-                                            </div>
+                                            </div> */}
+                                            {' '}<Button className="lp-btn" style={{marginTop: '10px'}} variant="outline-info" >Deposit</Button>{' '}
                                         </div>
 
                                         <div className="col-md-4 col-sm-12">
@@ -199,61 +274,64 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                         <div className="col-md-4 col-sm-12">
                                             <input type="number" placeholder="0.0" id="vdc2-withdraw-amount"/>
                                             <br />
-                                            <div align-center="center" style={{marginTop: '10px'}}>
+                                            {/* <div align-center="center" style={{marginTop: '10px'}}>
                                                 <a href="javascript:void(0);" className="rocket-button gold-rocket-button"
                                                   id="vdc2-withdraw-btn">
                                                     <div className="default">Withdraw</div>
                                                 </a>
-                                            </div>
+                                            </div> */}
+                                            <Button className="lp-btn" style={{marginTop: '10px'}} variant="outline-success" >Withdraw</Button>{' '}
                                         </div>
                                     </div>
                                 </div>
 
                                 <div className="row text-center">
                                     <div className="col-md-12 col-md-offset-3">
-                                        <b className="loans-page_orange-color">YOUR HOLDINGS</b>
+                                        <b className=" orange-to-white">YOUR HOLDINGS</b>
                                         <br/>
                                     </div>
                                 </div>
 
                                 <div className="row text-center">
                                     <div className="col-md-12 col-md-offset-3" id="pmine-holdings-1">
-                                        <p className="loans-page_orange-color"><span
+                                        <p className=" orange-to-white"><span
                                                     id="vdc2-holding-pmine">0.00000000</span> PMINE</p>
                                     </div>
                                 </div>
 
                                 <div align-center="center">
-                                    <a href="javascript:void(0);" className="rocket-button gold-rocket-button"
+                                    {/* <a href="javascript:void(0);" className="rocket-button gold-rocket-button"
                                       id="vdc2-claim-btn">
                                         <div className="default">CLAIM REWARDS</div>
-                                    </a>
+                                    </a> */}
+                                    {' '}<Button className="lp-btn" variant="outline-success" >CLAIM REWARDS </Button>{' '}
                                   
                                     <div className="row text-center">
                                         <div className="col-md-12 col-md-offset-3">
-                                            <b className="loans-page_orange-color">YOUR REWARDS</b>
+                                            <b className=" orange-to-white">YOUR REWARDS</b>
                                             <br/>
                                         </div>
                                     </div>
 
                                     <div className="row text-center">
                                         <div className="col-md-4">
-                                            <p className="loans-page_orange-color" style={{marginBottom: '0px'}}>PMINE</p>
-                                            <p className="loans-page_orange-color" id="vdc1-pmine-reward">0.00000000</p>
+                                            <p className=" orange-to-white" style={{marginBottom: '0px'}}>PMINE</p>
+                                            <p className=" orange-to-white" id="vdc1-pmine-reward">0.00000000</p>
                                         </div>
                                         <div className="col-md-4">
-                                            <p className="loans-page_orange-color" style={{marginBottom: '0px'}}>IOST</p>
-                                            <p className="loans-page_orange-color" id="vdc1-iost-reward">0.00000000</p>
+                                            <p className=" orange-to-white" style={{marginBottom: '0px'}}>IOST</p>
+                                            <p className=" orange-to-white" id="vdc1-iost-reward">0.00000000</p>
                                         </div>
                                         <div className="col-md-4">
-                                            <p className="loans-page_orange-color" style={{marginBottom: '0px'}}>PER</p>
-                                            <p className="loans-page_orange-color" id="vdc1-per-reward">0.00000000</p>
+                                            <p className=" orange-to-white" style={{marginBottom: '0px'}}>PER</p>
+                                            <p className=" orange-to-white" id="vdc1-per-reward">0.00000000</p>
                                         </div>
                                     </div>
                                 </div>
 
                             </form>
                         </div>
+                      </StyledPoolCard>
                     </div>
                     <div className="row text-center">
                         <div className="col-md-12">

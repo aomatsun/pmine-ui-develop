@@ -19,8 +19,6 @@ export interface PoolCardProps {
 }
 
 const StyledPoolCard = styled.div`
-  width: 300px;
-  height: 400px;
   border: 1px solid #17a2b8;
   border-radius: 10px;
   background-color: rgb(40, 37, 47);

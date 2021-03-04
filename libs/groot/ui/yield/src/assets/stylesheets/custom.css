@@ -915,7 +915,7 @@ legend,
 .navbar_no_mega ul.sub-menu li a,
 .header-cart .header-cart-dropdown,
 .header-cart .header-cart-dropdown .cart_list.product_list_widget > li a {
-    color: #6a6b80;
+    /* color: #6a6b80; */
 }
 
 .header-cart .cart-contents .cart-icon,
@@ -4169,4 +4169,10 @@ button[disabled], html input[disabled] {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+ .orange-to-white{
+    background:white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

@@ -47,14 +47,14 @@ export const App = (props) => {
 
   return (
     <StyledApp id="app">
-      {/* <Header onToggle={onConnect} address={account ? account.address : null} /> */}
+      <Header onToggle={onConnect} address={account ? account.address : null} />
 
       {/* START: routes */}
       {/* These routes and navigation have been generated for you */}
       {/* Feel free to move and update them to fit your needs */}
-      {/* <br />
+      <br />
       <hr />
-      <br /> */}
+      <br />
 
       <Route path="/" exact render={(props) => <GrootUiLanding onToggle={onConnect}
         address={account ? account.address : null} {...props} />} />
@@ -89,7 +89,7 @@ export const App = (props) => {
       <GrootComponentsFooter />
 
       {/* END: routes */}
-      {/* <GlobalStyle /> */}
+      <GlobalStyle />
     </StyledApp>
   );
 };
