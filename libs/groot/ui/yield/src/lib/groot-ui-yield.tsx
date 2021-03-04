@@ -70,11 +70,9 @@ const StyledPoolCard = styled.div`
     width: 100%;
   }
 
- 
-
   @media only screen and (max-width: 800px) {
     flex-direction: column;
-    width: 80%;
+    width: 100%;
     height: 500px;
     > .row  .pc-col-1 {
       text-align: center;
@@ -143,8 +141,8 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                     </div>
 
                     <div className="uniswap-container" style={{background:'transparent'}}>
-                     <StyledPoolCard>
                         <div className="swap">
+                            <StyledPoolCard>
                             <form action="" autoComplete="off">
                                 <div className="containers">
                                     <div className="row text-center">
@@ -180,14 +178,14 @@ export function GrootUiYield(props: GrootUiYieldProps) {
 
                                 <div className="row text-center">
                                     <div className="col-md-12 col-md-offset-3">
-                                        <b className=" orange-to-white">YOUR HOLDINGS</b>
+                                        <b className="loans-page_orange-color orange-to-white">YOUR HOLDINGS</b>
                                         <br/>
                                     </div>
                                 </div>
 
                                 <div className="row text-center">
                                     <div className="col-md-12 col-md-offset-3" id="pmine-holdings-1">
-                                        <p className=" orange-to-white"><span
+                                        <p className="loans-page_orange-color orange-to-white"><span
                                                     id="vdc1-holding-pmine">0.00000000</span> PMINE</p>
                                     </div>
                                 </div>
@@ -202,29 +200,29 @@ export function GrootUiYield(props: GrootUiYieldProps) {
 
                                     <div className="row text-center">
                                         <div className="col-md-12 col-md-offset-3">
-                                            <b className=" orange-to-white">YOUR REWARDS</b>
+                                            <b className="loans-page_orange-color orange-to-white">YOUR REWARDS</b>
                                             <br/>
                                         </div>
                                     </div>
 
                                     <div className="row text-center">
                                         <div className="col-md-4">
-                                            <p className=" orange-to-white" style={{marginBottom: '0px'}}>PMINE</p>
-                                            <p className=" orange-to-white" id="vdc1-pmine-reward">0.00000000</p>
+                                            <p className="loans-page_orange-color orange-to-white" style={{marginBottom: '0px'}}>PMINE</p>
+                                            <p className="loans-page_orange-color orange-to-white" id="vdc1-pmine-reward">0.00000000</p>
                                         </div>
                                         <div className="col-md-4">
-                                            <p className=" orange-to-white" style={{marginBottom: '0px'}}>IOST</p>
-                                            <p className=" orange-to-white" id="vdc1-iost-reward">0.00000000</p>
+                                            <p className="loans-page_orange-color orange-to-white" style={{marginBottom: '0px'}}>IOST</p>
+                                            <p className="loans-page_orange-color orange-to-white" id="vdc1-iost-reward">0.00000000</p>
                                         </div>
                                         <div className="col-md-4">
-                                            <p className=" orange-to-white" style={{marginBottom: '0px'}}>PER</p>
-                                            <p className=" orange-to-white" id="vdc1-per-reward">0.00000000</p>
+                                            <p className="loans-page_orange-color orange-to-white" style={{marginBottom: '0px'}}>PER</p>
+                                            <p className="loans-page_orange-color orange-to-white" id="vdc1-per-reward">0.00000000</p>
                                         </div>
                                     </div>
                                 </div>
                             </form>
+                          </StyledPoolCard>
                         </div>
-                      </StyledPoolCard>
                     </div>
                     <div className="row text-center">
                         <div className="col-md-12">
@@ -249,8 +247,8 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                     </div>
 
                     <div className="uniswap-container" style={{background:'transparent'}}>
-                      <StyledPoolCard>
                         <div className="swap">
+                         <StyledPoolCard>
                             <form action="" autoComplete="off">
                                 <div className="containers">
                                     <div className="row text-center">
@@ -287,14 +285,14 @@ export function GrootUiYield(props: GrootUiYieldProps) {
 
                                 <div className="row text-center">
                                     <div className="col-md-12 col-md-offset-3">
-                                        <b className=" orange-to-white">YOUR HOLDINGS</b>
+                                        <b className="loans-page_orange-color orange-to-white">YOUR HOLDINGS</b>
                                         <br/>
                                     </div>
                                 </div>
 
                                 <div className="row text-center">
                                     <div className="col-md-12 col-md-offset-3" id="pmine-holdings-1">
-                                        <p className=" orange-to-white"><span
+                                        <p className="loans-page_orange-color orange-to-white"><span
                                                     id="vdc2-holding-pmine">0.00000000</span> PMINE</p>
                                     </div>
                                 </div>
@@ -308,30 +306,30 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                   
                                     <div className="row text-center">
                                         <div className="col-md-12 col-md-offset-3">
-                                            <b className=" orange-to-white">YOUR REWARDS</b>
+                                            <b className="loans-page_orange-color orange-to-white">YOUR REWARDS</b>
                                             <br/>
                                         </div>
                                     </div>
 
                                     <div className="row text-center">
                                         <div className="col-md-4">
-                                            <p className=" orange-to-white" style={{marginBottom: '0px'}}>PMINE</p>
-                                            <p className=" orange-to-white" id="vdc1-pmine-reward">0.00000000</p>
+                                            <p className="loans-page_orange-color orange-to-white" style={{marginBottom: '0px'}}>PMINE</p>
+                                            <p className="loans-page_orange-color orange-to-white" id="vdc1-pmine-reward">0.00000000</p>
                                         </div>
                                         <div className="col-md-4">
-                                            <p className=" orange-to-white" style={{marginBottom: '0px'}}>IOST</p>
-                                            <p className=" orange-to-white" id="vdc1-iost-reward">0.00000000</p>
+                                            <p className="loans-page_orange-color orange-to-white" style={{marginBottom: '0px'}}>IOST</p>
+                                            <p className="loans-page_orange-color orange-to-white" id="vdc1-iost-reward">0.00000000</p>
                                         </div>
                                         <div className="col-md-4">
-                                            <p className=" orange-to-white" style={{marginBottom: '0px'}}>PER</p>
-                                            <p className=" orange-to-white" id="vdc1-per-reward">0.00000000</p>
+                                            <p className="loans-page_orange-color orange-to-white" style={{marginBottom: '0px'}}>PER</p>
+                                            <p className="loans-page_orange-color orange-to-white" id="vdc1-per-reward">0.00000000</p>
                                         </div>
                                     </div>
                                 </div>
 
                             </form>
+                         </StyledPoolCard>
                         </div>
-                      </StyledPoolCard>
                     </div>
                     <div className="row text-center">
                         <div className="col-md-12">
