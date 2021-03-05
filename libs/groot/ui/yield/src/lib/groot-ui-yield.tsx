@@ -114,8 +114,8 @@ export function GrootUiYield(props: GrootUiYieldProps) {
       <div className="Uniswap container" style={{paddingTop:'0%'}}>
         <div className="row text-center margin-auto">
                 <div className="col-md-12">
-                    <h1 className="componenet-title">PMINE</h1>
-                    <h1 className="componenet-title">Virtual Deposit Contracts</h1>
+                    <h1 className="componenet-title">GRO</h1>
+                    <h1 className="componenet-title">gROOT staking</h1>
                 </div>
             </div>
             <div className="row text-center margin-auto" style={{paddingTop: '25px'}}>
@@ -132,7 +132,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <div className="row text-center">
                         <div className="col-md-12">
-                            <h2 className="loans-page_orange-color" style={{marginBottom: '0px'}}>COMPOUND</h2>
+                            <h2 className="loans-page_orange-color" style={{marginBottom: '0px'}}>GRO Yield</h2>
                             <p className="loans-page_orange-color">1% PMINE Daily drip pool</p>
                         </div>
                     </div>
@@ -238,7 +238,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <div className="row text-center">
                         <div className="col-md-12">
-                            <h2 className="loans-page_orange-color" style={{marginBottom: '0px'}}>VOLATILE</h2>
+                            <h2 className="loans-page_orange-color" style={{marginBottom: '0px'}}>gROOT Harvest</h2>
                             <p className="loans-page_orange-color">5% PMINE Daily drip pool</p>
                         </div>
                     </div>
