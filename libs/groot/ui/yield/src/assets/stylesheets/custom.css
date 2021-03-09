@@ -3209,7 +3209,7 @@ button[disabled], html input[disabled] {
 
 .vdc-balance-div {
     padding: 0 10vw;
-    margin-bottom: -40px;
+    margin-bottom: -20px;
 }
 
 @media (max-width: 991px) {

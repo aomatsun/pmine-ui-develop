@@ -119,11 +119,11 @@ export function GrootUiYield(props: GrootUiYieldProps) {
             </div>
             <div className="row text-center margin-auto" style={{paddingTop: '25px'}}>
                 <div className="col-md-6 col-md-offset-3 vdc-balance-div margin-auto" style={{width:'25%'}}>
-                    <p className="text-white margin-bottom-zero" style={{display: 'flex',justifyContent: 'space-between'}}>IOST
+                    <p className="text-white margin-bottom-zero" style={{display: 'flex',justifyContent: 'space-between'}}>BNB
                         Balance : <span id="iostBalance">0</span></p>
-                    <p className="text-white margin-bottom-zero" style={{display: 'flex',justifyContent: 'space-between'}}>PMINE
+                    <p className="text-white margin-bottom-zero" style={{display: 'flex',justifyContent: 'space-between'}}>GROOT
                         Balance : <span id="pmineBalance">0</span></p>
-                    <p className="text-white margin-bottom-zero" style={{display: 'flex',justifyContent: 'space-between'}}>PER
+                    <p className="text-white margin-bottom-zero" style={{display: 'flex',justifyContent: 'space-between'}}>GRO
                         Balance : <span id="perBalance">0</span></p>
                 </div>
             </div>
@@ -132,7 +132,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                     <div className="row text-center">
                         <div className="col-md-12">
                             <h2 className="loans-page_orange-color" style={{marginBottom: '0px'}}>GRO Yield</h2>
-                            <p className="loans-page_orange-color">1% PMINE Daily drip pool</p>
+                            {/* <p className="loans-page_orange-color">1% PMINE Daily drip pool</p> */}
                         </div>
                     </div>
 
@@ -184,8 +184,10 @@ export function GrootUiYield(props: GrootUiYieldProps) {
 
                                 <div className="row text-center">
                                     <div className="col-md-12 col-md-offset-3" id="pmine-holdings-1">
+                                        <p className="loans-page_orange-color orange-to-white" style={{ marginBottom:'0px'}}><span
+                                                    id="vdc1-holding-pmine">0.00000000</span> GROOT</p>
                                         <p className="loans-page_orange-color orange-to-white"><span
-                                                    id="vdc1-holding-pmine">0.00000000</span> PMINE</p>
+                                                    id="vdc1-holding-pmine">0.00000000</span> GRO</p>
                                     </div>
                                 </div>
 
@@ -205,18 +207,18 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                     </div>
 
                                     <div className="row text-center">
-                                        <div className="col-md-4">
-                                            <p className="loans-page_orange-color orange-to-white" style={{marginBottom: '0px'}}>PMINE</p>
+                                        <div className="col-md-12">
+                                            <p className="loans-page_orange-color orange-to-white" style={{marginBottom: '0px'}}>BNB</p>
                                             <p className="loans-page_orange-color orange-to-white" id="vdc1-pmine-reward">0.00000000</p>
                                         </div>
-                                        <div className="col-md-4">
+                                        {/* <div className="col-md-4">
                                             <p className="loans-page_orange-color orange-to-white" style={{marginBottom: '0px'}}>IOST</p>
                                             <p className="loans-page_orange-color orange-to-white" id="vdc1-iost-reward">0.00000000</p>
                                         </div>
                                         <div className="col-md-4">
                                             <p className="loans-page_orange-color orange-to-white" style={{marginBottom: '0px'}}>PER</p>
                                             <p className="loans-page_orange-color orange-to-white" id="vdc1-per-reward">0.00000000</p>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </form>
@@ -226,7 +228,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                     <div className="row text-center">
                         <div className="col-md-12">
                             <p className="loans-page_orange-color">
-                                <b className="loans-page_orange-color">Total PMINE In Contract : </b> <span
+                                <b className="loans-page_orange-color">Total Amount of BNB Collected : </b> <span
                                         id="totalPmineVDC1">0.00000000</span>
                             </p>
                         </div>
@@ -238,7 +240,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                     <div className="row text-center">
                         <div className="col-md-12">
                             <h2 className="loans-page_orange-color" style={{marginBottom: '0px'}}>gROOT Harvest</h2>
-                            <p className="loans-page_orange-color">5% PMINE Daily drip pool</p>
+                            {/* <p className="loans-page_orange-color">5% PMINE Daily drip pool</p> */}
                         </div>
                     </div>
 
@@ -291,8 +293,10 @@ export function GrootUiYield(props: GrootUiYieldProps) {
 
                                 <div className="row text-center">
                                     <div className="col-md-12 col-md-offset-3" id="pmine-holdings-1">
+                                        <p className="loans-page_orange-color orange-to-white" style={{ marginBottom:'0px'}}><span
+                                                    id="vdc2-holding-pmine">0.00000000</span> GROOT</p>
                                         <p className="loans-page_orange-color orange-to-white"><span
-                                                    id="vdc2-holding-pmine">0.00000000</span> PMINE</p>
+                                                    id="vdc1-holding-pmine">0.00000000</span> GRO</p>
                                     </div>
                                 </div>
 
@@ -311,18 +315,18 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                     </div>
 
                                     <div className="row text-center">
-                                        <div className="col-md-4">
-                                            <p className="loans-page_orange-color orange-to-white" style={{marginBottom: '0px'}}>PMINE</p>
+                                        <div className="col-md-12">
+                                            <p className="loans-page_orange-color orange-to-white" style={{marginBottom: '0px'}}>BNB</p>
                                             <p className="loans-page_orange-color orange-to-white" id="vdc1-pmine-reward">0.00000000</p>
                                         </div>
-                                        <div className="col-md-4">
+                                        {/* <div className="col-md-4">
                                             <p className="loans-page_orange-color orange-to-white" style={{marginBottom: '0px'}}>IOST</p>
                                             <p className="loans-page_orange-color orange-to-white" id="vdc1-iost-reward">0.00000000</p>
                                         </div>
                                         <div className="col-md-4">
                                             <p className="loans-page_orange-color orange-to-white" style={{marginBottom: '0px'}}>PER</p>
                                             <p className="loans-page_orange-color orange-to-white" id="vdc1-per-reward">0.00000000</p>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
 
@@ -333,7 +337,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                     <div className="row text-center">
                         <div className="col-md-12">
                             <p className="loans-page_orange-color">
-                                <b className="loans-page_orange-color">Total PMINE In Contract : </b> <span
+                                <b className="loans-page_orange-color">Total Amount of BNB Collected : </b> <span
                                         id="totalPmineVDC2">0.00000000</span>
                             </p>
                         </div>
