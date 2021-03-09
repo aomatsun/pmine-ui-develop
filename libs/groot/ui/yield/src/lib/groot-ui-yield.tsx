@@ -185,9 +185,9 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                 <div className="row text-center">
                                     <div className="col-md-12 col-md-offset-3" id="pmine-holdings-1">
                                         <p className="loans-page_orange-color orange-to-white" style={{ marginBottom:'0px'}}><span
-                                                    id="vdc1-holding-pmine">0.00000000</span> GROOT</p>
+                                                    id="vdc1-holding-pmine">0.00000000</span> GROOT($0.00)</p>
                                         <p className="loans-page_orange-color orange-to-white"><span
-                                                    id="vdc1-holding-pmine">0.00000000</span> GRO</p>
+                                                    id="vdc1-holding-pmine">0.00000000</span> GRO($0.00)</p>
                                     </div>
                                 </div>
 
@@ -294,9 +294,9 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                 <div className="row text-center">
                                     <div className="col-md-12 col-md-offset-3" id="pmine-holdings-1">
                                         <p className="loans-page_orange-color orange-to-white" style={{ marginBottom:'0px'}}><span
-                                                    id="vdc2-holding-pmine">0.00000000</span> GROOT</p>
+                                                    id="vdc2-holding-pmine">0.00000000</span> GROOT($0.00)</p>
                                         <p className="loans-page_orange-color orange-to-white"><span
-                                                    id="vdc1-holding-pmine">0.00000000</span> GRO</p>
+                                                    id="vdc1-holding-pmine">0.00000000</span> GRO($0.00)</p>
                                     </div>
                                 </div>
 
