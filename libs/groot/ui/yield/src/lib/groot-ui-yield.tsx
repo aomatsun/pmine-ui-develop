@@ -221,10 +221,13 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                         </div> */}
                                     </div>
                                     <div className="text-center">
-                                      <Button className="lp-btn" variant="outline-warning"  style = {{marginBottom:'5px'}}>Compound All Reward</Button>
+                                      <Button className="lp-btn" variant="outline-warning"  style = {{marginBottom:'5px'}}>Compound All Rewards</Button>
                                     </div>
-                                    <div className="text-center">
-                                      <Button className="lp-btn" variant="outline-warning" >APR for Compounding</Button>
+                                    <div className="row text-center">
+                                        <div className="col-md-12 col-md-offset-3">
+                                            <b className="loans-page_orange-color orange-to-white">APR for Compounding : 0.00%</b>
+                                            <br/>
+                                        </div>
                                     </div>
                                 </div>
                             </form>
@@ -335,10 +338,13 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                         </div> */}
                                     </div>
                                     <div className="text-center">
-                                      <Button className="lp-btn" variant="outline-warning" style = {{marginBottom:'5px'}} >Compound All Reward</Button>
+                                      <Button className="lp-btn" variant="outline-warning" style = {{marginBottom:'5px'}} >Compound All Rewards</Button>
                                     </div>
-                                    <div className="text-center">  
-                                      <Button className="lp-btn" variant="outline-warning" >APR for Compounding</Button>
+                                    <div className="row text-center">
+                                        <div className="col-md-12 col-md-offset-3">
+                                            <b className="loans-page_orange-color orange-to-white">APR for Compounding : 0.00%</b>
+                                            <br/>
+                                        </div>
                                     </div>
                                 </div>
 
