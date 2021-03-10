@@ -369,27 +369,27 @@ export function GrootUiYield(props: GrootUiYieldProps) {
           <div className="col-xs-4 col-sm-4 col-md-4 text-center">
             <p className="loans-page_orange-color">
               <span style={{fontSize: '1.1rem', fontWeight: 'bold'}}>PMINE Virtual Deposit Contract fee's and information</span><br/>
-                Compound VDC fees are 11% in and 11% out, they<br/>
+                Compound VDC fees are 11% in and 11% out, they
                 are distributed in the following way:<br/>
-                8% to drip pool<br/>
+                8% to drip pool<br />
                 1% PMINE Bankroll<br/>
                 1% Dev fee<br/>
                 1% Volatile VDC<br/>
-                Receives IOST and PER divs daily from PMINE staking<br/><br/>
+                Receives IOST and PER divs daily from PMINE staking
 
-                Volatile VDC fees are 33% in and 33% out, they are<br/>
+                Volatile VDC fees are 33% in and 33% out, they are
                 distributed in the following way:<br/>
                 30% to drip pool<br/>
                 2% PMINE Bankroll<br/>
                 1% Dev fee<br/>
-                Does not receive IOST and PER divs daily but does<br/>
-                receive 1% of all PMINE deposited into Compound VDC<br/><br/>
-
-                THIS DECENTRALIZED APPLICATION HAS BEEN MADE<br/>
-                FOR ENTERTAINMENT PURPOSES AND IS A GAME, NOT<br/>
-                AN INVESTMENT PLATFORM. NO GUARANTEES OR<br/>
-                WARRANTIES ARE ISSUED TO ANY PARTICIPANTS.<br/>
-                PLEASE DO NOT PARTICIPATE IN THIS GAME IF IT IS NOT<br/>
+                Does not receive IOST and PER divs daily but does
+                receive 1% of all PMINE deposited into Compound VDC
+                <br/>
+                THIS DECENTRALIZED APPLICATION HAS BEEN MADE
+                FOR ENTERTAINMENT PURPOSES AND IS A GAME, NOT
+                AN INVESTMENT PLATFORM. NO GUARANTEES OR
+                WARRANTIES ARE ISSUED TO ANY PARTICIPANTS.
+                PLEASE DO NOT PARTICIPATE IN THIS GAME IF IT IS NOT
                 LEGAL TO DO SO IN YOUR PARTICULAR LOCALITY.</p>
           </div>
           <div className="col-xs-4 col-sm-4 col-md-4 text-center">
