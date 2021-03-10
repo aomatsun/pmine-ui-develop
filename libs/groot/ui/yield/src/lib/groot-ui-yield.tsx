@@ -114,14 +114,14 @@ export function GrootUiYield(props: GrootUiYieldProps) {
       <div className="Uniswap container" style={{paddingTop:'0%'}}>
         <div className="row text-center margin-auto">
                 <div className="col-md-12">
-                    <h1 className="componenet-title">GRO/gROOT staking</h1>
+                    <h1 className="componenet-title">GRO/gROOT STAKING</h1>
                 </div>
             </div>
             <div className="row text-center margin-auto" style={{paddingTop: '25px'}}>
                 <div className="col-md-6 col-md-offset-3 vdc-balance-div margin-auto" style={{width:'25%'}}>
                     <p className="text-white margin-bottom-zero" style={{display: 'flex',justifyContent: 'space-between'}}>BNB
                         Balance : <span id="iostBalance">0</span></p>
-                    <p className="text-white margin-bottom-zero" style={{display: 'flex',justifyContent: 'space-between'}}>GROOT
+                    <p className="text-white margin-bottom-zero" style={{display: 'flex',justifyContent: 'space-between'}}>gROOT
                         Balance : <span id="pmineBalance">0</span></p>
                     <p className="text-white margin-bottom-zero" style={{display: 'flex',justifyContent: 'space-between'}}>GRO
                         Balance : <span id="perBalance">0</span></p>
@@ -292,7 +292,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                 <div className="row text-center">
                                     <div className="col-md-12 col-md-offset-3" id="pmine-holdings-1">
                                         <p className="loans-page_orange-color orange-to-white"><span
-                                                    id="vdc1-holding-pmine">0.00000000</span> GRO($0.00)</p>
+                                                    id="vdc1-holding-pmine">0.00000000</span> gROOT($0.00)</p>
                                     </div>
                                 </div>
 

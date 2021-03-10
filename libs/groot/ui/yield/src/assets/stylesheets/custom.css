@@ -2685,7 +2685,7 @@ button[disabled], html input[disabled] {
 .componenet-title {
     letter-spacing: 2px;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     margin-bottom: 0;
     color: white;
     color: transparent;
