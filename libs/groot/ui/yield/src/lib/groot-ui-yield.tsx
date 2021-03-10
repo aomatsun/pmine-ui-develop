@@ -158,7 +158,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                         </div>
 
                                         <div className="col-md-4 col-sm-12">
-                                          <img src={vdcCompound} alt="profile" style={{height:'70px', marginTop:'10px'}}/>
+                                          <img src={vdcCompound} alt="profile" style={{height:'70px', marginTop:'5px'}}/>
                                         </div>
 
                                         <div className="col-md-4 col-sm-12">
@@ -276,7 +276,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                         </div>
 
                                         <div className="col-md-4 col-sm-12">
-                                            <img src={vdcVolatile} alt="profile" style={{height:'70px', marginTop:'10px'}}/>
+                                            <img src={vdcVolatile} alt="profile" style={{height:'70px', marginTop:'5px'}}/>
                                         </div>
 
                                         <div className="col-md-4 col-sm-12">
