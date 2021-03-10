@@ -342,7 +342,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                 </div>
             </div>
         <div className = "row margin-auto">
-          <div className="col-xs-4 col-sm-4 col-md-3 text-center">
+          <div className="col-xs-4 col-sm-4 col-md-4 text-center">
             <table className="table-dark richlist-table margin-auto">
               <thead>
                 <tr>
@@ -366,9 +366,9 @@ export function GrootUiYield(props: GrootUiYieldProps) {
               </tbody>
             </table>
           </div>
-          <div className="col-xs-4 col-sm-4 col-md-6 text-center">
+          <div className="col-xs-4 col-sm-4 col-md-4 text-center">
             <p className="loans-page_orange-color">
-              <span style={{fontSize: '1.1rem', fontWeight: 'bold'}}>PMINE Virtual Deposit Contract fee's and information</span><br/>
+              <span style={{fontSize: '1.0rem', fontWeight: 'bold'}}>PMINE Virtual Deposit Contract fee's and information</span><br/>
                 Compound VDC fees are 11% in and 11% out, they<br/>
                 are distributed in the following way:<br/>
                 8% to drip pool<br/>
@@ -392,7 +392,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                 PLEASE DO NOT PARTICIPATE IN THIS GAME IF IT IS NOT<br/>
                 LEGAL TO DO SO IN YOUR PARTICULAR LOCALITY.</p>
           </div>
-          <div className="col-xs-4 col-sm-4 col-md-3 text-center">
+          <div className="col-xs-4 col-sm-4 col-md-4 text-center">
             <table className="table-dark richlist-table margin-auto">
               <thead>
                 <tr>
