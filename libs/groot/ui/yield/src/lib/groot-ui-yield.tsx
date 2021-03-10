@@ -184,8 +184,6 @@ export function GrootUiYield(props: GrootUiYieldProps) {
 
                                 <div className="row text-center">
                                     <div className="col-md-12 col-md-offset-3" id="pmine-holdings-1">
-                                        <p className="loans-page_orange-color orange-to-white" style={{ marginBottom:'0px'}}><span
-                                                    id="vdc1-holding-pmine">0.00000000</span> GROOT($0.00)</p>
                                         <p className="loans-page_orange-color orange-to-white"><span
                                                     id="vdc1-holding-pmine">0.00000000</span> GRO($0.00)</p>
                                     </div>
@@ -196,7 +194,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                       id="vdc1-claim-btn">
                                         <div className="default">CLAIM REWARDS</div>
                                     </a> */}
-                                    <Button className="lp-btn" variant="outline-warning" >CLAIM REWARDS </Button>
+                                    <Button className="lp-btn" variant="outline-info" >CLAIM REWARDS </Button>
                                   
 
                                     <div className="row text-center">
@@ -233,16 +231,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                             </form>
                           </StyledPoolCard>
                         </div>
-                    </div>
-                    <div className="row text-center">
-                        <div className="col-md-12">
-                            <p className="loans-page_orange-color">
-                                <b className="loans-page_orange-color">Total Amount of BNB Collected : </b> <span
-                                        id="totalPmineVDC1">0.00000000</span>
-                            </p>
-                        </div>
-                    </div>
-                    
+                    </div>                   
                 </div>
 
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
@@ -302,8 +291,6 @@ export function GrootUiYield(props: GrootUiYieldProps) {
 
                                 <div className="row text-center">
                                     <div className="col-md-12 col-md-offset-3" id="pmine-holdings-1">
-                                        <p className="loans-page_orange-color orange-to-white" style={{ marginBottom:'0px'}}><span
-                                                    id="vdc2-holding-pmine">0.00000000</span> GROOT($0.00)</p>
                                         <p className="loans-page_orange-color orange-to-white"><span
                                                     id="vdc1-holding-pmine">0.00000000</span> GRO($0.00)</p>
                                     </div>
@@ -314,7 +301,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                       id="vdc2-claim-btn">
                                         <div className="default">CLAIM REWARDS</div>
                                     </a> */}
-                                    <Button className="lp-btn" variant="outline-warning" >CLAIM REWARDS </Button>
+                                    <Button className="lp-btn" variant="outline-info" >CLAIM REWARDS </Button>
                                   
                                     <div className="row text-center">
                                         <div className="col-md-12 col-md-offset-3">
@@ -350,14 +337,6 @@ export function GrootUiYield(props: GrootUiYieldProps) {
 
                             </form>
                          </StyledPoolCard>
-                        </div>
-                    </div>
-                    <div className="row text-center">
-                        <div className="col-md-12">
-                            <p className="loans-page_orange-color">
-                                <b className="loans-page_orange-color">Total Amount of BNB Collected : </b> <span
-                                        id="totalPmineVDC2">0.00000000</span>
-                            </p>
                         </div>
                     </div>
                 </div>
