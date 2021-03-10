@@ -170,7 +170,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                                     <div className="default">Withdraw</div>
                                                 </a>
                                             </div> */}
-                                            {' '}<Button className="lp-btn" style={{marginTop: '10px'}} variant="outline-success" >WithDraw </Button>{' '}
+                                            {' '}<Button className="lp-btn" style={{marginTop: '10px'}} variant="outline-success" >Withdraw </Button>{' '}
                                         </div>
                                     </div>
                                 </div>
@@ -194,7 +194,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                       id="vdc1-claim-btn">
                                         <div className="default">CLAIM REWARDS</div>
                                     </a> */}
-                                    <Button className="lp-btn" variant="outline-info" >CLAIM REWARDS </Button>
+                                    <Button className="lp-btn" variant="outline-info" >Claim Rewards </Button>
                                   
 
                                     <div className="row text-center">
@@ -301,7 +301,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                       id="vdc2-claim-btn">
                                         <div className="default">CLAIM REWARDS</div>
                                     </a> */}
-                                    <Button className="lp-btn" variant="outline-info" >CLAIM REWARDS </Button>
+                                    <Button className="lp-btn" variant="outline-info" >Claim Rewards </Button>
                                   
                                     <div className="row text-center">
                                         <div className="col-md-12 col-md-offset-3">
