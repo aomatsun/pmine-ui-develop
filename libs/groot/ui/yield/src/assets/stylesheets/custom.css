@@ -4185,6 +4185,6 @@ button[disabled], html input[disabled] {
 }
 .btn-leaf:hover, .btn-leaf:focus, .btn-leaf:active, .btn-leaf.active, .open>.dropdown-toggle.btn-leaf {
     color: #fff;
-    background-color: #00b3db;
+    background-color: #05ffc5;
     border-color: #285e8e; /*set the color you want here*/
 }
