@@ -369,19 +369,12 @@ export function GrootUiYield(props: GrootUiYieldProps) {
           <div className="col-xs-4 col-sm-4 col-md-4 text-center">
             <p className="loans-page_orange-color">
               <span style={{fontSize: '1.1rem', fontWeight: 'bold'}}>GRO/gROOT STAKING fees and information</span><br/>
-                Compound VDC fees are 11% in and 11% out, they
-                are distributed in the following way:<br/>
-                8% to drip pool<br />
-                1% PMINE Bankroll<br/>
+                GRO/gROOT staking fees are 11% in and 11% out, they are distributed in the following way:<br/>
+                3% market buys gROOT<br/>
                 1% Dev fee<br/>
-                1% Volatile VDC<br/>
-                Receives IOST and PER divs daily from PMINE staking
-
-                Volatile VDC fees are 33% in and 33% out, they are
-                distributed in the following way:<br/>
-                30% to drip pool<br/>
-                2% PMINE Bankroll<br/>
-                1% Dev fee<br/>
+                7% Treasury<br/>
+                Receives BNB reward every block, which can be compounded
+                to increase your stake of GRO/gROOT.<br/>
                 Does not receive IOST and PER divs daily but does
                 receive 1% of all PMINE deposited into Compound VDC
                 <br/>
