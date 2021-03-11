@@ -2689,10 +2689,10 @@ button[disabled], html input[disabled] {
     margin-bottom: 0;
     color: white;
     color: transparent;
-    background: linear-gradient(to right, #B9AF5B 0%, #DCD880 100%);
+    background: linear-gradient(to right, #B09055 0%, #B09055 100%);/*8D7243*/
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-filter: drop-shadow(-1px -1px white) drop-shadow(1px 1px #808080) drop-shadow(1px 1px #7a7a7a) drop-shadow(1px 1px #757575) drop-shadow(1px 1px #707070) drop-shadow(1px 1px #6b6b6b) drop-shadow(1px 1px #666666) drop-shadow(12px 12px 30px rgba(0, 0, 0, 0.2)) drop-shadow(12px 12px 10px rgba(0, 0, 0, 0.2));
+    /* -webkit-filter: drop-shadow(-1px -1px white) drop-shadow(1px 1px #808080) drop-shadow(1px 1px #7a7a7a) drop-shadow(1px 1px #757575) drop-shadow(1px 1px #707070) drop-shadow(1px 1px #6b6b6b) drop-shadow(1px 1px #666666) drop-shadow(12px 12px 30px rgba(0, 0, 0, 0.2)) drop-shadow(12px 12px 10px rgba(0, 0, 0, 0.2)); */
 }
 
 .margin-bottom-zero {
