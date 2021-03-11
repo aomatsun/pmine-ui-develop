@@ -114,7 +114,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
       <div className="Uniswap container" style={{paddingTop:'0%'}}>
         <div className="row text-center margin-auto">
                 <div className="col-md-12">
-                    <h1 className="componenet-title" style={{fontSize:'38px'}}>GRO/gROOT STAKING</h1>
+                    <h1 className="componenet-title" style={{fontSize:'33px'}}>GRO/gROOT STAKING</h1>
                 </div>
             </div>
             <div className="row text-center margin-auto" style={{paddingTop: '25px'}}>
