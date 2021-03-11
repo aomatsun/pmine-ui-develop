@@ -375,9 +375,6 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                 7% Treasury<br/>
                 Receives BNB reward every block, which can be compounded
                 to increase your stake of GRO/gROOT.<br/>
-                Does not receive IOST and PER divs daily but does
-                receive 1% of all PMINE deposited into Compound VDC
-                <br/>
                 THIS DECENTRALIZED APPLICATION HAS BEEN MADE
                 FOR ENTERTAINMENT PURPOSES AND IS A GAME, NOT
                 AN INVESTMENT PLATFORM. NO GUARANTEES OR
