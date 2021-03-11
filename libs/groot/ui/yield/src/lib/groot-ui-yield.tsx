@@ -368,7 +368,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
           </div>
           <div className="col-xs-4 col-sm-4 col-md-4 text-center">
             <p className="loans-page_orange-color">
-              <span style={{fontSize: '1.1rem', fontWeight: 'bold'}}>PMINE Virtual Deposit Contract fee's and information</span><br/>
+              <span style={{fontSize: '1.1rem', fontWeight: 'bold'}}>GRO/gROOT STAKING fees and information</span><br/>
                 Compound VDC fees are 11% in and 11% out, they
                 are distributed in the following way:<br/>
                 8% to drip pool<br />
