@@ -154,7 +154,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                                     <div className="default">Deposit</div>
                                                 </a>
                                             </div> */}
-                                            {' '}<Button className="lp-btn" style={{marginTop: '10px'}} variant="outline-info" >Deposit</Button>{' '}
+                                            <Button className="lp-btn" style={{marginTop: '10px'}} variant="outline-info" >Deposit</Button>
                                         </div>
 
                                         <div className="col-md-4 col-sm-12">
@@ -170,7 +170,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                                     <div className="default">Withdraw</div>
                                                 </a>
                                             </div> */}
-                                            {' '}<Button className="lp-btn" style={{marginTop: '10px'}} variant="outline-success" >Withdraw </Button>{' '}
+                                            <Button className="lp-btn btn-leaf" style={{marginTop: '10px'}} >Withdraw </Button>
                                         </div>
                                     </div>
                                 </div>
@@ -219,7 +219,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                         </div> */}
                                     </div>
                                     <div className="text-center">
-                                      <Button className="lp-btn" variant="outline-success"  style = {{marginBottom:'5px'}}>Compound All Rewards</Button>
+                                      <Button className="lp-btn btn-leaf" style = {{marginBottom:'5px',}}>Compound All Rewards</Button>
                                     </div>
                                     <div className="row text-center">
                                         <div className="col-md-12 col-md-offset-3">
@@ -261,7 +261,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                                     <div className="default">Deposit</div>
                                                 </a>
                                             </div> */}
-                                            {' '}<Button className="lp-btn" style={{marginTop: '10px'}} variant="outline-info" >Deposit</Button>{' '}
+                                            <Button className="lp-btn" style={{marginTop: '10px'}} variant="outline-info" >Deposit</Button>
                                         </div>
 
                                         <div className="col-md-4 col-sm-12">
@@ -277,7 +277,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                                     <div className="default">Withdraw</div>
                                                 </a>
                                             </div> */}
-                                            <Button className="lp-btn" style={{marginTop: '10px'}} variant="outline-success" >Withdraw</Button>{' '}
+                                            <Button className="lp-btn btn-leaf" style={{marginTop: '10px'}} >Withdraw</Button>
                                         </div>
                                     </div>
                                 </div>
@@ -325,7 +325,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                                         </div> */}
                                     </div>
                                     <div className="text-center">
-                                      <Button className="lp-btn" variant="outline-success" style = {{marginBottom:'5px'}} >Compound All Rewards</Button>
+                                      <Button className="lp-btn btn-leaf" style = {{marginBottom:'5px'}} >Compound All Rewards</Button>
                                     </div>
                                     <div className="row text-center">
                                         <div className="col-md-12 col-md-offset-3">

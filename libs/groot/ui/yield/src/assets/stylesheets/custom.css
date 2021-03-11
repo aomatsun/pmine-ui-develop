@@ -4176,3 +4176,15 @@ button[disabled], html input[disabled] {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+/*This is modifying the btn-primary colors but you could create your own .btn-something class as well*/
+.btn-leaf {
+    color: #05ffc5;
+    background-color: transparent;
+    border-color: #05ffc5; /*set the color you want here*/
+}
+.btn-leaf:hover, .btn-leaf:focus, .btn-leaf:active, .btn-leaf.active, .open>.dropdown-toggle.btn-leaf {
+    color: #fff;
+    background-color: #00b3db;
+    border-color: #285e8e; /*set the color you want here*/
+}
