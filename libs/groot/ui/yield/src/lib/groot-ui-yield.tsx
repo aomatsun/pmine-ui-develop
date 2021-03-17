@@ -131,8 +131,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <div className="row text-center">
                         <div className="col-md-12">
-                            <h2 className="loans-page_orange-color" style={{marginBottom: '0px'}}>GRO Yield</h2>
-                            {/* <p className="loans-page_orange-color">1% PMINE Daily drip pool</p> */}
+                            <h2 style={{marginBottom: '0px', color: '#05ffc5'}}>GRO Yield</h2>
                         </div>
                     </div>
 
@@ -237,8 +236,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <div className="row text-center">
                         <div className="col-md-12">
-                            <h2 className="loans-page_orange-color" style={{marginBottom: '0px'}}>gROOT Harvest</h2>
-                            {/* <p className="loans-page_orange-color">5% PMINE Daily drip pool</p> */}
+                            <h2 style={{marginBottom: '0px', color: '#05ffc5'}}>gROOT Harvest</h2>
                         </div>
                     </div>
 
