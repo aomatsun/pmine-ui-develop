@@ -128,7 +128,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                 </div>
             </div>
             <div className="row margin-auto">
-                <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     <div className="row text-center">
                         <div className="col-md-12">
                             <h2 className="loans-page_orange-color" style={{marginBottom: '0px'}}>GRO Yield</h2>
@@ -234,7 +234,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                     </div>                   
                 </div>
 
-                <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     <div className="row text-center">
                         <div className="col-md-12">
                             <h2 className="loans-page_orange-color" style={{marginBottom: '0px'}}>gROOT Harvest</h2>

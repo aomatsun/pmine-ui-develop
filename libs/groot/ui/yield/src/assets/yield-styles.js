@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
 
   #app {
     min-height: 100vh;
-    min-width: 300px;
+    min-width: 335px;
     width: 100%;
   }
 

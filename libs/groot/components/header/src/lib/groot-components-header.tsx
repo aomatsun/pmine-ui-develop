@@ -36,7 +36,7 @@ export function Header (props: HeaderProps) {
     <StyledHeader>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" id="navbar">
         <Navbar.Brand href="#home"><img src={require('../assets/images/groot-navbar-logo.png')} alt="Groot-Nav-Logo" height="35px"/></Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{margin:'0px'}}/>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto"></Nav>
           <Nav>
