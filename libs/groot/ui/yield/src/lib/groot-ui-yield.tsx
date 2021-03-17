@@ -118,7 +118,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                 </div>
             </div>
             <div className="row text-center margin-auto" style={{paddingTop: '25px'}}>
-                <div className="col-md-6 col-md-offset-3 vdc-balance-div margin-auto" style={{width:'25%'}}>
+                <div className="col-md-6 col-md-offset-3 vdc-balance-div margin-auto">
                     <p className="text-white margin-bottom-zero" style={{display: 'flex',justifyContent: 'space-between'}}>BNB
                         Balance : <span id="iostBalance">0</span></p>
                     <p className="text-white margin-bottom-zero" style={{display: 'flex',justifyContent: 'space-between'}}>gROOT
@@ -131,7 +131,8 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <div className="row text-center">
                         <div className="col-md-12">
-                            <h2 style={{marginBottom: '0px', color: '#05ffc5'}}>GRO Yield</h2>
+                            <h2 className="loans-page_orange-color" style={{marginBottom: '0px'}}>GRO Yield</h2>
+                            {/* <p className="loans-page_orange-color">1% PMINE Daily drip pool</p> */}
                         </div>
                     </div>
 
@@ -140,7 +141,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
 
                     <div className="uniswap-container" style={{background:'transparent'}}>
                         <div className="swap">
-                            <StyledPoolCard>
+                            <StyledPoolCard style={{height:'auto'}}>
                             <form action="" autoComplete="off">
                                 <div className="containers">
                                     <div className="row text-center">
@@ -236,7 +237,8 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <div className="row text-center">
                         <div className="col-md-12">
-                            <h2 style={{marginBottom: '0px', color: '#05ffc5'}}>gROOT Harvest</h2>
+                            <h2 className="loans-page_orange-color" style={{marginBottom: '0px'}}>gROOT Harvest</h2>
+                            {/* <p className="loans-page_orange-color">5% PMINE Daily drip pool</p> */}
                         </div>
                     </div>
 
@@ -245,7 +247,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
 
                     <div className="uniswap-container" style={{background:'transparent'}}>
                         <div className="swap">
-                         <StyledPoolCard>
+                         <StyledPoolCard style={{height:'auto'}}>
                             <form action="" autoComplete="off">
                                 <div className="containers">
                                     <div className="row text-center">
@@ -340,7 +342,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                 </div>
             </div>
         <div className = "row margin-auto">
-          <div className="col-xs-4 col-sm-4 col-md-4 text-center">
+          <div className="col-xs-12 col-sm-12 col-md-4 text-center">
             <table className="table-dark richlist-table margin-auto">
               <thead>
                 <tr>
@@ -364,7 +366,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
               </tbody>
             </table>
           </div>
-          <div className="col-xs-4 col-sm-4 col-md-4 text-center">
+          <div className="col-xs-12 col-sm-12 col-md-4 text-center">
             <p className="loans-page_orange-color">
               <span style={{fontSize: '1.1rem', fontWeight: 'bold'}}>GRO/gROOT STAKING fees and information</span><br/>
                 GRO/gROOT staking fees are 11% in and 11% out, they are distributed in the following way:<br/>
@@ -380,7 +382,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                 PLEASE DO NOT PARTICIPATE IN THIS GAME IF IT IS NOT
                 LEGAL TO DO SO IN YOUR PARTICULAR LOCALITY.</p>
           </div>
-          <div className="col-xs-4 col-sm-4 col-md-4 text-center">
+          <div className="col-xs-12 col-sm-12 col-md-4 text-center">
             <table className="table-dark richlist-table margin-auto">
               <thead>
                 <tr>
