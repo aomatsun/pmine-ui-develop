@@ -342,7 +342,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                 </div>
             </div>
         <div className = "row margin-auto">
-          <div className="col-xs-12 col-sm-12 col-md-4 text-center">
+          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 text-center">
             <table className="table-dark richlist-table margin-auto">
               <thead>
                 <tr>
@@ -366,7 +366,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
               </tbody>
             </table>
           </div>
-          <div className="col-xs-12 col-sm-12 col-md-4 text-center">
+          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 text-center">
             <p className="loans-page_orange-color">
               <span style={{fontSize: '1.1rem', fontWeight: 'bold'}}>GRO/gROOT STAKING fees and information</span><br/>
                 GRO/gROOT staking fees are 11% in and 11% out, they are distributed in the following way:<br/>
@@ -382,7 +382,7 @@ export function GrootUiYield(props: GrootUiYieldProps) {
                 PLEASE DO NOT PARTICIPATE IN THIS GAME IF IT IS NOT
                 LEGAL TO DO SO IN YOUR PARTICULAR LOCALITY.</p>
           </div>
-          <div className="col-xs-12 col-sm-12 col-md-4 text-center">
+          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 text-center">
             <table className="table-dark richlist-table margin-auto">
               <thead>
                 <tr>
